@@ -1,37 +1,45 @@
 {% load static %}
 
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prof Vitor</title>
+
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
 
     <!-- Katex -->
-    <!-- Removed the comment tags to enable the scripts and styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
   </head>
-
+  
   <body>
     <!-- header -->
     {% include 'blog/header.html' %}
-
+    
     <!-- menu -->
     {% include 'blog/menu.html' %}
-
+    
     <!-- sidebar -->
     {% include 'blog/sidebar.html' %}
-
+    
     <!-- main -->
     {% include 'blog/main.html' %}
-
+    
     <!-- footer -->
-    {% include 'blog/footer.html' %}
-
-    <h1>Prof Vitor</h1>
-    <a href=""></a>
+    {% include 'blog/footer.html' %}  
+    
     <script src="{% static 'js/index.js' %}"></script>
+    
+    <!-- Katex -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>  
+    
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/4bcd5fd9f3.js" crossorigin="anonymous"></script>
+
   </body>
-</html>
+  </html>

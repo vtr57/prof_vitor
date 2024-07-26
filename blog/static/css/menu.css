@@ -1,0 +1,22 @@
+menu {
+    overflow: auto;
+    white-space: nowrap;
+    height: 50px;
+    background-color: #1A6791;
+    padding: 0;
+    border-bottom: 1px solid #D7B86B;
+    color: #f1faff;
+    margin: 0;
+}
+
+menu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+menu a:hover{
+    background-color: #5991af;
+}
