@@ -1,0 +1,37 @@
+{% load static %}
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prof Vitor</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+    <!-- Katex -->
+    <!-- Removed the comment tags to enable the scripts and styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    {% include 'blog/header.html' %}
+
+    <!-- menu -->
+    {% include 'blog/menu.html' %}
+
+    <!-- sidebar -->
+    {% include 'blog/sidebar.html' %}
+
+    <!-- main -->
+    {% include 'blog/main.html' %}
+
+    <!-- footer -->
+    {% include 'blog/footer.html' %}
+
+    <h1>Prof Vitor</h1>
+    <a href=""></a>
+    <script src="{% static 'js/index.js' %}"></script>
+  </body>
+</html>
