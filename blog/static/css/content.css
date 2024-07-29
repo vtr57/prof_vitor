@@ -10,6 +10,40 @@ main {
     background-color: #fdfeff;
 }
 
+/* index */
+
+.card{
+    width: calc(100vw - 40px);
+    padding: 5px;
+    margin: 0;
+    /* border: 1px solid #073a55;
+    border-radius: 13px; */
+}
+
+main a{
+    text-decoration: none;
+}
+
+.card img{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #1A6791;
+    border-radius: 10px;
+    box-shadow: -3px 3px #4a6f81;
+}
+
+.card .data_publicacao{
+    font-size: 14px;
+    color: #4a6f81;
+}
+
+.card h2, .card p{
+    margin: 0;
+}
+
+/* posts */
+
 main h1, h2, h3{
     color: #1A6791;
 }

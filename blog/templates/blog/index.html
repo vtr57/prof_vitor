@@ -5,7 +5,13 @@
 
 <main>
     {% for nota in notas_publicadas %}
-    <a href="{% url 'nota' slug=nota.slug %}"><li>{{ nota.titulo }} {{ nota.data_publicacao }}</li></a>
+    <a href="{% url 'nota' slug=nota.slug %}">
+    <div class="card">
+        <img src="{% static "img/posts/grandezas-fisicas-e-unidades.png" %}" alt="">
+        <h2>{{ nota.titulo }}</h2>
+        <p class="data_publicacao">{{ nota.data_publicacao }}</p>
+    </div>
+    </a>
     {% endfor %}
 </main>
 
