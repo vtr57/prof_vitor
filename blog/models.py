@@ -6,8 +6,6 @@ from django.conf import settings
 import os
 
 
-
-
 class NotasAula(models.Model):
     titulo = models.CharField(max_length=255)
     caminho_html = models.CharField(max_length=300)
@@ -21,7 +19,7 @@ class NotasAula(models.Model):
         os.makedirs(os.path.dirname(caminho_completo), exist_ok=True)
         if not os.path.exists(caminho_completo):
             with open(caminho_completo, 'w') as f:
-                f.write('{% extends "blog/base.html" %}\n{% load static %}\n{% block content %}\n\n{% endblock content %}')
+                f.write('{% extends "blog/base.html" %}\n{% load static %}\n{% block content %}\n<main>\n\n</main>{% endblock content %}')
                 
     def save(self, *args, **kwargs):
         if not self.slug:

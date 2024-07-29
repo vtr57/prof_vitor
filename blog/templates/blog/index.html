@@ -3,8 +3,10 @@
 {% load static %}
 {% block content %}
 
-{% for nota in notas_publicadas %}
+<main>
+    {% for nota in notas_publicadas %}
     <a href="{% url 'nota' slug=nota.slug %}"><li>{{ nota.titulo }} {{ nota.data_publicacao }}</li></a>
-{% endfor %}
+    {% endfor %}
+</main>
 
 {% endblock content %}

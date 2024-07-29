@@ -1,266 +1,151 @@
-{% extends "blog/base.html" %}
+{% extends 'blog/base.html' %}
 
 {% load static %}
 {% block content %}
+  <main>
+    <h1>Grandezas Físicas e Unidades</h1>
 
-<p>Tudo que se mede na natureza são grandezas físicas. Apenas é possível retirar algum dados da natureza através de grandezas físicas. E existem muitas delas, como por exemplo a distância de um ponto a outro; o tempo que se leva para viajar de um ponto a outro; a temperatura de um local em um certa manhã; etc. E existem duas categorias de grandezas físicas: as escalares e as vetoriais.</p>
-<p>
-  <br />
-</p><h2><span style="color: rgb(0, 71, 178);">Grandezas Escalares</span></h2><p>
-  <br />
-</p>
-<p>
-  As grandezas escalares, pode-se dizer, que são mais simples. Elas necessitam <strong>apenas dos seus valores, ou módulo</strong>. Ou seja, se uma pessoa lhe falar que sua massa é de 70kg, toda a informação necessária foi dita. Tudo que se gostaria de saber foi possível. Outro exemplo é a temperatura, que inclusive pode admitir valores negativos na escala celsius. Por exemplo, -3°C.
-</p><h3>Exemplos de grandezas escalares</h3><ol>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>massa
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>tempo
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>distância
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>energia
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>entropia
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>potencial elétrico
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>corrente elétrica
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>...
-  </li>
-</ol>
-<p>
-  <br />
-</p><h2><span style="color: rgb(0, 71, 178);">Grandezas Vetoriais</span></h2><p>
-  <br />
-</p>
-<p>
-  Já as grandezas vetoriais necessitam de mais informações. São aquelas que necessitam também da direção e sentido, além do seu valor. Por exemplo o deslocamento. Se uma pessoa lhe pergunta a onde fica tal lugar, você irá apontar para ela uma direção e sentido para seguir e também quem sabe um valor em quadras ou metros. Ou seja, você precisou informar a <strong>direção, sentido e valor (intensidade ou módulo)</strong>. São exemplos de grandezas vetoriais:
-</p>
-<ol>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>deslocamento
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>velocidade
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>aceleração
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>força
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>campo gravitacional
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>campo elétrico
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>impulso
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>quantidade de movimento
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>...
-  </li>
-</ol>
-<p>
-  <br />
-</p><h2><span style="color: rgb(0, 71, 178);">SI (Sistema Internacional de Unidades)</span></h2><p>
-  <br />
-</p>
-<p>
-  Há uma convenção entre os cientistas sobre quais são as unidades de medida para se usar nas <strong>grandezas fundamentais</strong>. Para saber mais <a href="https://pt.wikipedia.org/wiki/Sistema_Internacional_de_Unidades" rel="noopener noreferrer" target="_blank">clique aqui</a>. Todas as unidades das grandezas físicas são derivadas a partir das sete grandezas fundamentais, que são elas:
-</p>
-<ol>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>metro (m)
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>segundo (s)
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>quilograma (kg)
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>ampère (A)
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>kelvin (K)
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>mol (mol)
-  </li>
-  <li data-list="bullet">
-    <span class="ql-ui" contenteditable="false"></span>candela (cd)
-  </li>
-</ol><h2><br /></h2><h2><span style="color: rgb(0, 71, 178);">Análise Dimensional</span></h2><p>
-  <br />
-</p>
-<p>
-  A análise dimensional é uma maneira de avaliar grandezas por meio das suas dimensões. Usa-se <strong>massa (M), comprimento (L) e tempo (T)</strong> para expressar todas grandezas derivadas. Por exemplo a velocidade, em linhas gerais, é \( \frac{distância}{tempo} \). Ou seja \( M^0 L^1 T^{-1} \). Já a dimensão de força é \( M^1 L^1 T^{-2} \).
-</p>
-<p>
-  <br />
-</p><h2><span style="color: rgb(0, 71, 178);">Mudança de Unidades</span></h2><p>
-  <br />
-</p>
-<p>No dia a dia é muito comum usar diversas unidades de medida. Como por exemplo para o tempo os minutos e horas, não apenas os segundos. Já para a distância é comum usar quilômetro e centímetros, não apenas o metro. Com estas possibilidades em mãos, é necessário saber mudar de unidade para unidade. Para exemplificar, será mostrado um alguns exemplos simples.</p><h3><br /></h3><h3>Exemplo 1:</h3><p>Quantos segundos são equivalentes a 2 minutos?</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">R:</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 1 min = 60 s \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 2 \times 1min = 2 \times 60 s \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[\therefore 2min = 120 s \]</span>
-</p>
-<p>
-  <br />
-</p>
-<blockquote>
-  <span style="color: rgb(136, 136, 136);">Obs.: este símbolo \( \therefore \) siginifica</span><em style="color: rgb(136, 136, 136);">portanto</em><span style="color: rgb(136, 136, 136);">na matemática.</span>
-</blockquote>
-<p>
-  <span style="color: rgb(136, 136, 136);">Você pode ler 2min como sendo \( 2 \times min \). Ou seja, como se o número 2 multiplicasse o minuto. Ler dessa forma, ajuda a fazer mudanças de unidades.</span>
-</p><h3><br /></h3><h3>Exemplo 2:</h3><p>Quantos quilômetros possuem 2500 metros?</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">R: Uma outra forma de resolver é utilizando frações, ou a popularmente conhecida como "regrea de 3":</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ \frac{x km}{1 km} = \frac{2500m}{1000m} \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ \frac{x \cancel{km}}{1 \cancel {km}} = \frac{\cancel{2500}\cancel{m}}{\cancel{1000}\cancel{m}} \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ x = 2,5 \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[\therefore 2500m = 2,5 km \]</span>
-</p>
-<p>
-  <br />
-</p><h3>Exemplo 3:</h3><p>Quantos segundos são equivalentes a 3 horas?</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">R: Sabe-se que \( 1min = 60s \) e \( 1h = 60min \). Assim deve-se saber a equivalência entre hora e segundo primeiramente:</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 1h = 60min \Rightarrow 60 \times (1min) \Rightarrow 60 \times (60s) \Rightarrow 3600s \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[1h = 3600s \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 3 \times 1h = 3 \times 3600s \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 3h = 10800 s \]</span>
-</p>
-<p>
-  <br />
-</p><h3>Exemplo 4:</h3><p>A unidade usual para velocidade é o km/h, no entanto no SI é o m/s. Desta forma qual a equivalência entre 72km/h em m/s?</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">R:</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 72\frac{km}{h} = \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ \frac{72 \times (1km)}{1h} = \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ \frac{ 72 \times (1000 m)}{3600s}\]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ \frac{ 72 \times (\cancel{1000} m)}{\cancel{3600}s}\]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ \frac{72 m}{3,6 s} \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[20 m/s \]</span>
-</p>
-<p>
-  <br />
-</p><h3>Exemplo 5:</h3><p>Quantos km/h são 30m/s?</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">R:</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 30\frac{m}{s} = \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 30\frac{m}{s} \times \frac{1km}{1000m} \times \frac{3600s}{1h} = \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 30\frac{\cancel{m}}{\cancel{s}} \times \frac{1km}{\cancel{1000}\cancel{m}} \times \frac{\cancel{3600}\cancel{s}}{1h} = \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 30 \times 3,6 \frac{km}{h}= \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">\[ 108km/h \]</span>
-</p>
-<p>
-  <span style="color: rgb(136, 136, 136);">Mas por que se pode multiplicar por \( \frac{1km}{1000m} \) e \( \frac{3600s}{1h} \)? Porque toda fração é igual a 1 onde o numerador é igual ao denominador. E multiplicar por 1 mantém a igualdade!</span>
-</p>
-<blockquote>
-  Em resumo para transformar de km/h para m/s, <strong>divide-se</strong> por 3,6. E para transformar de m/s para km/h, <strong>multiplica-se</strong> por 3,6.
-</blockquote>
-<p>
-  <br />
-</p><h2>Exercícios:</h2><ol>
-  <li data-list="ordered">
-    <span class="ql-ui" contenteditable="false"></span>Assinale V para verdadeiro ou F para falso:
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>( ) Volume é uma grandeza vetorial.
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>( ) Tempo é uma grandeza escalar.
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>( ) Deslocamento é uma grandeza escalar.
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>( ) Velocidade é uma grandeza vetorial.
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>( ) Força é uma grandeza vetorial.
-  </li>
-  <li data-list="ordered">
-    <span class="ql-ui" contenteditable="false"></span>Transforme a grandeza para a unidade informada:
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>2 km = ____ m.
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>1500 m = ____ km.
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>300 s = ____ min
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>420 J = ____ cal. Sendo 1 cal = 4,2 J.
-  </li>
-  <li data-list="ordered" class="ql-indent-1">
-    <span class="ql-ui" contenteditable="false"></span>5e = ____ C. Sendo \( 1e = 1,6\times 10^{-19} C\)
-  </li>
-</ol>
+    <p class="introducao">Tudo que se mede na natureza são grandezas físicas. Apenas é possível retirar algum dados da natureza através de grandezas físicas. E existem muitas delas, como por exemplo a distância de um ponto a outro; o tempo que se leva para viajar de um ponto a outro; a temperatura de um local em um certa manhã; etc. E existem duas categorias de grandezas físicas: as escalares e as vetoriais.</p>
+    <h2>Grandezas Escalares</h2>
+    <p>
+      As grandezas escalares, pode-se dizer, que são mais simples. Elas necessitam <strong>apenas dos seus valores, ou módulo</strong>. Ou seja, se uma pessoa lhe falar que sua massa é de 70kg, toda a informação necessária foi dita. Tudo que se gostaria de saber foi possível. Outro exemplo é a temperatura, que inclusive pode admitir valores negativos na escala celsius. Por exemplo, -3°C.
+    </p>
+    <h3>Exemplos de grandezas escalares</h3>
+    <ol>
+      <li>massa</li>
+      <li>tempo</li>
+      <li>distância</li>
+      <li>energia</li>
+      <li>entropia</li>
+      <li>potencial elétrico</li>
+      <li>corrente elétrica</li>
+      <li>...</li>
+    </ol>
+    <h2>Grandezas Vetoriais</h2>
+    <p>
+      Já as grandezas vetoriais necessitam de mais informações. São aquelas que necessitam também da direção e sentido, além do seu valor. Por exemplo o deslocamento. Se uma pessoa lhe pergunta a onde fica tal lugar, você irá apontar para ela uma direção e sentido para seguir e também quem sabe um valor em quadras ou metros. Ou seja, você precisou informar a
+      <strong>direção, sentido e valor (intensidade ou módulo)</strong>. São exemplos de grandezas vetoriais:
+    </p>
+    <ol>
+      <li>deslocamento</li>
+      <li>velocidade</li>
+      <li>aceleração</li>
+      <li>força</li>
+      <li>campo gravitacional</li>
+      <li>campo elétrico</li>
+      <li>impulso</li>
+      <li>quantidade de movimento</li>
+      <li>...</li>
+    </ol>
+    <h2>SI (Sistema Internacional de Unidades)</h2>
+    <p>
+      Há uma convenção entre os cientistas sobre quais são as unidades de medida para se usar nas <strong>grandezas fundamentais</strong>. Para saber mais <a href="https://pt.wikipedia.org/wiki/Sistema_Internacional_de_Unidades" target="_blank">clique aqui</a>. Todas as unidades das grandezas físicas são derivadas a partir das sete grandezas fundamentais, que são elas:
+    </p>
+    <ol>
+      <li>metro (m)</li>
+      <li>segundo (s)</li>
+      <li>quilograma (kg)</li>
+      <li>ampère (A)</li>
+      <li>kelvin (K)</li>
+      <li>mol (mol)</li>
+      <li>candela (cd)</li>
+    </ol>
+    <h2>Análise Dimensional</h2>
+    <p>
+      A análise dimensional é uma maneira de avaliar grandezas por meio das suas dimensões. Usa-se <strong>massa (M), comprimento (L) e tempo (T)</strong> para expressar todas grandezas derivadas. Por exemplo a velocidade, em linhas gerais, é \( \frac{distância}{tempo} \). Ou seja \( M^0 L^1 T^{-1} \). Já a dimensão de força é \( M^1 L^1 T^{-2} \).
+    </p>
+    <h2>Mudança de Unidades</h2>
+    <p>No dia a dia é muito comum usar diversas unidades de medida. Como por exemplo para o tempo os minutos e horas, não apenas os segundos. Já para a distância é comum usar quilômetro e centímetros, não apenas o metro. Com estas possibilidades em mãos, é necessário saber mudar de unidade para unidade. Para exemplificar, será mostrado um alguns exemplos simples.</p>
+    
+    <div class="exemplo">
+      <h3>Exemplo 1:</h3>
+      <p>Quantos segundos são equivalentes a 2 minutos?</p>
+      <div class="resolucao">
+        <p>\[ 1 min = 60 s \]</p>
+        <p>\[ 2 \times 1min = 2 \times 60 s \]</p>
+        <p>\[\therefore 2min = 120 s \]</p>
+      </div>
+      <p>
+        Obs.: o símbolo \( \therefore \) siginifica <em>portanto</em> na matemática.
+      </p>
+      <p>Você pode ler 2min como sendo \( 2 \times min \). Ou seja, como se o número 2 multiplicasse o minuto. Ler dessa forma, ajuda a fazer mudanças de unidades.</p>
+    </div>
 
-{% endblock content %}
+    <div class="exemplo">
+      <h3>Exemplo 2:</h3>
+      <p>Quantos quilômetros possuem 2500 metros?</p>
+      <div class="resolucao">
+        <p>Uma outra forma de resolver é utilizando frações, ou a popularmente conhecida como "regrea de 3":</p>
+        <p>\[ \frac{x km}{1 km} = \frac{2500m}{1000m} \]</p>
+        <p>\[ \frac{x \cancel{km}}{1 \cancel {km}} = \frac{\cancel{2500}\cancel{m}}{\cancel{1000}\cancel{m}} \]</p>
+        <p>\[ x = 2,5 \]</p>
+        <p>\[\therefore 2500m = 2,5 km \]</p>
+      </div>
+    </div>
 
+    <div class="exemplo">
+      <h3>Exemplo 3:</h3>
+      <p>Quantos segundos são equivalentes a 3 horas?</p>
+      <div class="resolucao">
+        <p>Sabe-se que \( 1min = 60s \) e \( 1h = 60min \). Assim deve-se descobrir a equivalência entre hora e segundo primeiramente:</p>
+        <p>\[ 1h = 60min \Rightarrow 60 \times (1min) \Rightarrow \]</p>
+        <p>\[ \Rightarrow 60 \times (60s) \Rightarrow 3600s \]</p>
+        <p>\[1h = 3600s \]</p>
+        <p>\[ 3 \times 1h = 3 \times 3600s \]</p>
+        <p>\[ 3h = 10800 s \]</p>
+      </div>
+    </div>
+
+
+    <div class="exemplo">
+      <h3>Exemplo 4:</h3>
+      <p>A unidade usual para velocidade é o \( km/h \), no entanto no SI é o m/s. Desta forma qual a equivalência entre 72km/h em m/s?</p>
+      <div class="resolucao">
+        <p>\[ 72\frac{km}{h} = \]</p>
+        <p>\[ \frac{72 \times (1km)}{1h} = \]</p>
+        <p>\[ \frac{ 72 \times (1000 m)}{3600s}\]</p>
+        <p>\[ \frac{ 72 \times (\cancel{1000} m)}{\cancel{3600}s}\]</p>
+        <p>\[ \frac{72 m}{3,6 s} \]</p>
+        <p>\[20 m/s \]</p>
+      </div>
+    </div>
+    
+    <div class="exemplo">
+      <h3>Exemplo 5:</h3>
+      <p>Quantos km/h são 30m/s?</p>
+      <div class="resolucao">
+        <p>\[ 30\frac{m}{s} = \]</p>
+        <p>\[ 30\frac{m}{s} \times \frac{1km}{1000m} \times \frac{3600s}{1h} = \]</p>
+        <p>\[ 30\frac{\cancel{m}}{\cancel{s}} \times \frac{1km}{\cancel{1000}\cancel{m}} \times \frac{\cancel{3600}\cancel{s}}{1h} = \]</p>
+        <p>\[ 30 \times 3,6 \frac{km}{h}= \]</p>
+        <p>\[ 108km/h \]</p>
+      </div>
+        <p>Mas por que se pode multiplicar por \( \frac{1km}{1000m} \) e \( \frac{3600s}{1h} \)? Porque toda fração é igual a 1 onde o numerador é igual ao denominador. E multiplicar por 1 mantém a igualdade!</p>
+        <p>
+          Em resumo para transformar de km/h para m/s, <strong>divide-se</strong> por 3,6. E para transformar de m/s para km/h,
+          <strong>multiplica-se</strong> por 3,6.
+        </p>
+    </div>
+
+
+    <h2>Exercícios:</h2>
+    <ol class="enunciado">
+      <li>Assinale V para verdadeiro ou F para falso:</li>
+      <ol class="opcoes">
+        <li>( ) Volume é uma grandeza vetorial.</li>
+        <li>( ) Tempo é uma grandeza escalar.</li>
+        <li>( ) Deslocamento é uma grandeza escalar.</li>
+        <li>( ) Velocidade é uma grandeza vetorial.</li>
+        <li>( ) Força é uma grandeza vetorial.</li>
+      </ol>
+      <li>Transforme a grandeza para a unidade informada:</li>
+      <ol class="opcoes">
+        <li>2 km = ____ m.</li>
+        <li>1500 m = ____ km.</li>
+        <li>300 s = ____ min</li>
+        <li>420 J = ____ cal. Sendo 1 cal = 4,2 J.</li>
+        <li>5e = ____ C. Sendo \( 1e = 1,6\times 10^{-19} C\)</li>
+      </ol>
+    </ol>
+  </main>
+{% endblock %}

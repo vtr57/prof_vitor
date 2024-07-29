@@ -8,7 +8,8 @@
     <title>Prof Vitor</title>
 
     <!-- My Styles -->
-    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/content.css' %}" />
     <link rel="stylesheet" href="{% static 'css/header.css' %}" />
     <link rel="stylesheet" href="{% static 'css/menu.css' %}" />
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
@@ -27,7 +28,7 @@
     <!-- sidebar -->
     {% include 'blog/sidebar.html' %}
     
-    <!-- index -->
+    <!-- content -->
     {% block content %}
     {% endblock %}
     

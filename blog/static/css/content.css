@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+    font-size: 20px;
+    font-family: Roboto;
+}
+
+main {
+    margin: 20px 20px;
+    padding: 0;
+    background-color: #fdfeff;
+}
+
+main h1, h2, h3{
+    color: #1A6791;
+}
+
+main .introducao,
+main .resolucao p{
+    color: #4a6f81;
+}
+
+main p,
+main ol li,
+main ul li{
+    color: #073a55;
+}
+
+ol.opcoes{
+    list-style-type: lower-alpha;
+}
+
+main .exemplo{
+    background-color: #073a552f;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: -3px 3px 10px #073a552f;
+}
+
+
