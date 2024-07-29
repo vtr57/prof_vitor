@@ -8,16 +8,18 @@ main {
     margin: 20px 20px;
     padding: 0;
     background-color: #fdfeff;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* index */
 
 .card{
-    width: calc(100vw - 40px);
+    width: calc(426px - 40px);
     padding: 5px;
-    margin: 0;
-    /* border: 1px solid #073a55;
-    border-radius: 13px; */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #073a55;
 }
 
 main a{
@@ -40,6 +42,11 @@ main a{
 
 .card h2, .card p{
     margin: 0;
+}
+
+main .citacao{
+    color: #073a55;
+    text-align: center;
 }
 
 /* posts */
@@ -66,8 +73,7 @@ ol.opcoes{
 main .exemplo{
     background-color: #073a552f;
     padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 15px 0px; 
     border-radius: 5px;
     box-shadow: -3px 3px 10px #073a552f;
 }

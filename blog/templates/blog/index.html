@@ -13,6 +13,30 @@
     </div>
     </a>
     {% endfor %}
+    {% for nota in notas_publicadas %}
+    <a href="{% url 'nota' slug=nota.slug %}">
+    <div class="card">
+        <img src="{% static "img/posts/grandezas-fisicas-e-unidades.png" %}" alt="">
+        <h2>{{ nota.titulo }}</h2>
+        <p class="data_publicacao">{{ nota.data_publicacao }}</p>
+    </div>
+    </a>
+    {% endfor %}
+    {% for nota in notas_publicadas %}
+    <a href="{% url 'nota' slug=nota.slug %}">
+    <div class="card">
+        <img src="{% static "img/posts/grandezas-fisicas-e-unidades.png" %}" alt="">
+        <h2>{{ nota.titulo }}</h2>
+        <p class="data_publicacao">{{ nota.data_publicacao }}</p>
+    </div>
+    </a>
+    {% endfor %}
+    <a href="https://citacoes.in/autores/cesar-lattes/" target="_blank" rel="noopener noreferrer">
+    <div class="citacao">
+        <h1>“A ciência não pode prever o que vai acontecer. Só pode prever a probabilidade de algo acontecer.”</h1>
+        <cite>Cesar Lattes</cite>
+    </div>
+    </a>
 </main>
 
 {% endblock content %}
