@@ -6,13 +6,15 @@ from django.conf import settings
 import os
 
 
-class NotasAula(models.Model):
+class NotasAula(models.Model):      
     titulo = models.CharField(max_length=255)
     caminho_html = models.CharField(max_length=300)
     slug = models.SlugField(default="", null=False)
     data_criacao = models.DateField(default=timezone.now)
     status_publicado = models.BooleanField(default=False)
     data_publicacao = models.DateTimeField(blank=True, null=True)
+    banner = models.ImageField(upload_to=f'img/post/', blank=True, null=True)
+
     
     def criar_arquivo(self, caminho_html):
         caminho_completo = os.path.join(settings.TEMPLATES[0]['DIRS'][0], caminho_html)
