@@ -47,6 +47,12 @@ main a{
 main .citacao{
     color: #073a55;
     text-align: center;
+    font-style: italic;
+    margin: 30px 0px;
+}
+
+main .citacao a:visited{
+    color: #073a55;
 }
 
 /* posts */

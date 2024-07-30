@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+  <main>
+    <div class="content">
+      <h1>Referencial</h1>
+      <p class="introducao">
+        Como você pode ter visto anteriormente na aula sobre
+         <a href="{% url 'nota' slug='grandezas-fisicas-e-unidades' %}">Grandezas e Unidades</a>,
+          tudo que pode ser medido são grandezas físicas. E como medir movimento?
+           Esse foi um dos grandes questionamentos da humanidade que perduram até hoje.
+      </p>
+      <h2>
+        O que é um Referencial?
+      </h2>
+      <p>
+        Para se medir movimento você deve-se adotar um referencial, que ao longo desta 
+        aula ficará claro. Um referencial, nada mais é do que um sistema de coordenadas
+        fixo em algum ponto. O sistema de coordenadas pode ser um sistema cartesiano em
+        duas dimensões, \( x \) e \( y \). Por exemplo, pode-se adotar sistema de 
+        coordenadas em um ponto do solo. que ficaria assim:
+      </p>
+      <img src="" alt="">
+    </div>
+  </main>
+{% endblock %}
