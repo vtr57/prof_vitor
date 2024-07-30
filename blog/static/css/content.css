@@ -88,6 +88,12 @@ main .content img{
     width: calc(100vw - 60px);
     margin: 10px auto;
 }
+
+main .content .exemplo .dados{
+    border: 1px dashed #073a55;
+    border-radius: 5px;
+}
+
 /* index */
 
 @media (min-width: 600px){
