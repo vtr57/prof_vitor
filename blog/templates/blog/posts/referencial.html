@@ -18,7 +18,7 @@
         aula ficará claro. Um referencial, nada mais é do que um sistema de coordenadas
         fixo em algum ponto. O sistema de coordenadas pode ser um sistema cartesiano em
         duas dimensões, \( x \) e \( y \). Por exemplo, pode-se adotar sistema de 
-        coordenadas em um ponto do solo. que ficaria assim:
+        coordenadas em um ponto do solo, que ficaria assim:
       </p>
       <img src="{% static "img/posts/exemplo-referencial.png" %}" alt="exemplo referencial, um sistema cartesiano fixo na calçada de uma rua. Ao fundo 2 prédios (1 alto e outro menor) com uma casa ao lado.">
       <h2>
@@ -32,7 +32,7 @@
       <p>
         Assim sendo, pode-se definir a grandeza posição como uma "flecha" que liga a
         origem \( O \) do referencial até o ponto escolhido. Assim, a posição da pessoa na
-        imagem abaixo é indicada pela "flecha" (que o nome correto é vetor) a seguir:
+        imagem abaixo é indicada pela "flecha" (o nome correto é vetor) a seguir:
       </p>
       <img src="{% static "img/posts/posicao.png" %}" alt="um vetor apontando para uma pessoa exemplificando uma representação do vetor posição.">
       <p>Neste caso, deu-se o nome do vetor posição de \( \vec{s} \). O que é bastante comum
@@ -60,7 +60,7 @@
       <p>
         Muitas grandezas são definidas como variação de alguma outra grandeza, como
          \( final - inicial \). É tão comum que se utiliza um símbolo especial para isso, o 
-         \( Delta (\Delta) \). Desta forma, pode-se escrever a equação \( (1) \), como:
+         \( Delta (\Delta) \). Desta forma, pode-se reescrever a equação \( (1) \), como:
          \[ \vec{d} = \Delta\vec{s} \]
       </p>
       <p>
@@ -127,11 +127,39 @@
           </p>
           <img src="{% static "img/posts/exemplo4-referencial.png" %}" alt=" ">
           <p>
-            Perceba que o valor do deslocamento deu negativo e o vetor deslocamento
+            Perceba que o valor do deslocamento foi negativo e o vetor deslocamento
             aponta para o lado oposto ao do referencial. Isso é comum a todos os vetores.
           </p>
         </div>
       </div>
+
+      <div class="exercicios">
+        <h2>Exercícios</h2>
+        <ol class="enunciado">
+          <li>Calcule o deslocamento para as seguintes variações de posição:</li>
+          <ol class="opcoes">
+            <li>\( \vec{s}_{i} = 2cm; \vec{s}_{f} = 16cm \)</li>
+            <li>\( \vec{s}_{i} = -5cm; \vec{s}_{f} = 10cm \)</li>
+            <li>\( \vec{s}_{i} = -7cm; \vec{s}_{f} = -10cm \)</li>
+            <li>\( \vec{s}_{i} = 5cm; \vec{s}_{f} = -8cm \)</li>
+          </ol>
+          <li>Desenhe diagrama para todos os deslocamentos da questão anterior
+            e compare o sentido do vetor deslocamento com o sinal do resultado.
+          </li>
+          <li>Se um objeto cai inicialmente de uma altura em relação ao solo de \(50m\) e após \(2s\) o objeto
+            está na posição de \(30m\), qual o seu deslocamento na vertical? Utilize um referencial
+            apontando para cima com a sua origem no solo.
+          </li>
+          <li>Calcule o deslocamento para o movimento da questão anterior porém utilize
+            um referencial que aponta para baixo e com a origem no início do movimento.
+            Qual a diferença entre os dois resultados?
+          </li>
+        </ol>
+      </div>
+      <p>
+        Para completar o estudo do movimento, na próxima aula você estudará sobre
+        a <a href="{% url 'nota' slug='relatividade-do-movimento' %}">relatividade do movimento, que foi descoberta primeiramente por Galileu.
+      </p>
     </div>
   </main>
 {% endblock %}
