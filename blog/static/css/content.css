@@ -84,6 +84,10 @@ main .content .exemplo{
     box-shadow: -3px 3px 10px #073a552f;
 }
 
+main .content img{
+    width: calc(100vw - 60px);
+    margin: 10px auto;
+}
 /* index */
 
 @media (min-width: 600px){
@@ -118,5 +122,11 @@ main .content .exemplo{
 
     main .content h1, main .content h2, main .content h3, main .content ul li{
         width: 100%;
+    }
+
+    main .content img{
+        width: 400px;
+        display: flex;
+        justify-content: center;                
     }
 }

@@ -14,13 +14,58 @@
         O que é um Referencial?
       </h2>
       <p>
-        Para se medir movimento você deve-se adotar um referencial, que ao longo desta 
+        Para se medir movimento deve-se adotar um referencial, que ao longo desta 
         aula ficará claro. Um referencial, nada mais é do que um sistema de coordenadas
         fixo em algum ponto. O sistema de coordenadas pode ser um sistema cartesiano em
         duas dimensões, \( x \) e \( y \). Por exemplo, pode-se adotar sistema de 
         coordenadas em um ponto do solo. que ficaria assim:
       </p>
-      <img src="" alt="">
+      <img src="{% static "img/posts/exemplo-referencial.png" %}" alt="exemplo referencial, um sistema cartesiano fixo na calçada de uma rua. Ao fundo 2 prédios (1 alto e outro menor) com uma casa ao lado.">
+      <h2>
+        Posição
+      </h2>
+      <p>
+        Quando você aponta o dedo para algo indicando sua posição, automaticamente você se
+        põem como um referencial. E o seu braço e mão funcionam como uma flecha que
+        indica o ponto onde algo está.
+      </p>
+      <p>
+        Assim sendo, pode-se definir a grandeza posição como uma "flecha" que liga a
+        origem \( O \) do referencial até o ponto escolhido. Assim, a posição da pessoa na
+        imagem abaixo é indicada pela "flecha" (que o nome correto é vetor) a seguir:
+      </p>
+      <img src="{% static "img/posts/posicao.png" %}" alt="um vetor apontando para uma pessoa exemplificando uma representação do vetor posição.">
+      <p>Neste caso, deu-se o nome do vetor posição de \( \vec{s} \). O que é bastante comum
+        pois no inglês a grandeza posição se chama "space".
+      </p>
+      <h2>
+        Deslocamento
+      </h2>
+      <p>
+        Quando um corpo se move, pode-se observar que a sua posição muda. Logo definimos uma nova
+        grandeza para medir o quanto essa posição mudou. Esta grandeza é chamada de \(deslocamento \).
+      </p>
+      <p>
+        Define-se deslocamento da seguinte forma:
+        \[ \vec{d} = \vec{s}_{final} - \vec{s}_{inicial} \quad (1)\]
+      </p>
+      <p>
+        Ou seja, deslocamento é igual a posição final menos a posição inicial.
+      </p>
+      <p>
+        Perceba que na imagem, é simples mostrar o quanto algo se deslocou. E o vetor deslocamento
+        é facilmente visualizado. Pois ele demonstra o quanto o corpo se movimentou.
+      </p>
+      <img src="{% static "img/posts/deslocamento.png" %}" alt="um vetor deslocamento que mostra o quanto uma pessoa deslocou.">
+      <p>
+        Muitas grandezas são definidas como variação de alguma outra grandeza, como
+         \( final - inicial \). É tão comum que se utiliza um símbolo especial para isso, o 
+         \( Delta (\Delta) \). Desta forma, pode-se escrever a equação \( (1) \), como:
+         \[ \vec{d} = \Delta\vec{s} \]
+      </p>
+      <p>
+        
+      </p>
     </div>
   </main>
 {% endblock %}
