@@ -20,3 +20,10 @@ menu a {
 menu a:hover{
     background-color: #5991af;
 }
+
+@media (min-width: 600px){
+    menu{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

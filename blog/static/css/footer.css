@@ -1,5 +1,5 @@
 footer{
-    height: 200px;
+    height: 250px;
     background-color: #1A6791;
     border-top: 1px solid #D7B86B;
     color: #f1faff;
@@ -11,10 +11,31 @@ footer{
 }
 
 footer ul{
-    margin: 0;
     padding: 0;
 }
 
+footer ul a{
+    color: #f1faff;
+    text-decoration: none;
+}
+
 footer ul li{
-    display: block
+    margin: 10px 0px;
+    display: block;
+    text-align: center;
+}
+
+footer .redes-sociais{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+footer .redes-sociais i{
+    padding: 0px 20px;
+}
+
+
+footer .redes-sociais a:visited{
+    color: #f1faff;
+    text-decoration: none;
 }

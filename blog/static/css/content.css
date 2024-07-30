@@ -15,7 +15,7 @@ main {
 /* index */
 
 .card{
-    width: calc(426px - 40px);
+    width: 100%;
     padding: 5px;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -27,7 +27,7 @@ main a{
 }
 
 .card img{
-    width: 100%;
+    width: calc(100vw - 60px);
     padding: 0;
     margin: 0;
     border: 1px solid #1A6791;
@@ -51,18 +51,18 @@ main .citacao{
 
 /* posts */
 
-main h1, h2, h3{
+main .content h1, h2, h3{
     color: #1A6791;
 }
 
-main .introducao,
-main .resolucao p{
+main .content .introducao,
+main .content .resolucao p{
     color: #4a6f81;
 }
 
-main p,
-main ol li,
-main ul li{
+main .content p,
+main .content ol li,
+main .content ul li{
     color: #073a55;
 }
 
@@ -70,7 +70,7 @@ ol.opcoes{
     list-style-type: lower-alpha;
 }
 
-main .exemplo{
+main .content .exemplo{
     background-color: #073a552f;
     padding: 5px;
     margin: 15px 0px; 
@@ -78,4 +78,39 @@ main .exemplo{
     box-shadow: -3px 3px 10px #073a552f;
 }
 
+/* index */
 
+@media (min-width: 600px){
+
+    main{
+        margin: auto;
+        max-width: 1400px;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: 400px;
+        padding: 5px;
+        padding-bottom: 10px;
+        margin: 20px;
+        border-bottom: 1px solid #073a55;
+    }
+
+    .card img{
+        width: 400px;
+    }
+}
+
+/* posts */
+
+@media (min-width: 600px){
+    .content{
+        padding: 0px 50px;
+        margin: auto;
+        width: 900px;
+    }
+
+    main .content h1, main .content h2, main .content h3, main .content ul li{
+        width: 100%;
+    }
+}

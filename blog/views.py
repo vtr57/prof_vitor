@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponse
 
 
 from .models import NotasAula
@@ -17,3 +18,9 @@ def detalhes_notas(request, slug):
         'nota': nota
     }
     return render(request, f'blog/posts/{nota.slug}.html')
+
+def sobre(request):
+    return HttpResponse("Sobre")
+
+def contato(request):
+    return HttpResponse("Contato    ")
