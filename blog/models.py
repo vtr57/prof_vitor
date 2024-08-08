@@ -33,9 +33,8 @@ class NotasAula(models.Model):
     def delete(self, *args, **kwargs):
         self.caminho_html = f'blog/posts/{self.slug}.html'
         caminho_completo = os.path.join(settings.TEMPLATES[0]['DIRS'][0], self.caminho_html)
-        if os.path.exists(caminho_completo):
-            os.remove(caminho_completo)
-            super(NotasAula, self).delete(*args, **kwargs)
+        os.remove(caminho_completo)
+        super(NotasAula, self).delete(*args, **kwargs)
 
         
     def publicar(self):

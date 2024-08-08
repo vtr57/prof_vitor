@@ -1,0 +1,171 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+  <main>
+    <div class="content">
+      <h1>
+        Velocidade
+      </h1>
+      <p class="introducao">
+        A grandeza velocidade é muito comum no dia a dia. 
+        Estando presente quando as pessoas viajam, quando se assite uma 
+        corrida na TV ou quando se joga videogame. Mas nesta aula 
+        será ensinado como ela é definida, como se calcula e como se resolve
+        problemas envolvendo velocidade, como por exemplo o medidor de 
+        velocidade de carros.
+      </p>
+      <p class="introducao">
+        A partir das aulas anteriores sobre
+        <a href="{% url 'nota' slug='referencial' %}">deslocamento e referencial</a>
+        consegue-se construir o conceito de velocidade.
+      </p>
+
+      <h2>
+        Definição
+      </h2>
+      <p>
+        Se um ponto move-se em relação a um referencial de um ponto 
+        \(A(s_i, t_i)\) até o ponto \( B(s_f, t_f) \), ou seja, 
+        move-se da posição \(s_i\) no tempo \(t_i\) até a posição 
+        \(s_f\) no tempo \(t_f\), pode-se calcular a velocidade como:
+      </p>
+      <p>
+        \[\vec{v}=\frac{\vec{s}_f - \vec{s}_i}{t_f-t_i}\]
+      </p>
+      <p>
+        Ou melhor: \[\vec{v}=\frac{\Delta \vec{s}}{\Delta t}\]
+      </p>
+      <p>
+        Perceba que a velocidade, assim como o deslocamento, também é 
+        uma grandeza vetorial.
+      </p>
+      <p>
+        E graficamente pode ser vista como:
+      </p>
+      <img src="{% static 'img/posts/VelocidadeGrafico.png' %}" alt="" />
+      <p>
+        Outro ponto que se nota é a direção e sentido da velocidade, 
+        o mesmo do deslocamento.
+      </p>
+      <p>
+        Os próximos exemplos ficarão claros como se aplica em exercícios.
+      </p>
+      <div class="exemplo">
+        <h3>Exemplo 1:</h3>
+        <p>
+          Qual a velocidade de um objeto que caminha em linha reta na horizontal da posição
+          \(s_i = 1 m \) até a posição \(s_f = 13m\), sendo o tempo inicial de 
+          \(t_i=3s\) até o instante de \(t_f=6s\)?
+        </p>
+        <div class="resolucao">
+          <div class="dados">
+            <p>
+              Dados:
+              \[s_i = 1 m; \quad s_f = 13m\]
+              \[t_i=3s; \quad t_f=6s\]
+            </p>
+          </div>
+          <p>
+            Resolução:
+            \[v = \frac{s_f - s_i}{t_f - t_i}\]
+            \[v = \frac{13 - 1}{6 - 3}\]
+            \[v = \frac{12}{3}\]
+            \[v = 4m/s\]
+          </p>
+        </div>
+      </div>
+
+      <div class="exemplo">
+        <h3>Exemplo 2</h3>
+        <p>
+          Se um objeto se desloca de \(10m\) até \(70m\) em \(5s\), qual a velocidade?
+        </p>
+        <div class="resolucao">
+          <div class="dados">
+            <p>
+              Dados:
+              \[s_i = 10 m; \quad s_f = 50m\]
+              \[\Delta t = 5s\]
+            </p>
+          </div>
+          <p>
+            Resolução:
+          </p>
+          <p>
+            Primeiramente se calcula o deslocamento:
+            \[\Delta s = s_f - s_i\]
+            \[\Delta s = 50 - 10\]
+            \[\Delta s = 40m\]
+          </p>
+          <p>
+            E então a velocidade:
+            \[v = \frac{\Delta s}{\Delta t}\]
+            \[v = \frac{40}{5}\]
+            \[v = 8m/s\]
+          </p>
+        </div>
+      </div>
+
+      <div class="exemplo">
+        <h2>Exemplo 3</h2>
+        <p>
+          Qual o tempo máximo que um veículo deve percorrer duas fitas consecutivas dos 
+          radares de velocidade? Considere o limite de velocidade como \(54km/h\) e a distancia
+          entre os pneus de \(1,5m\).
+        </p>
+        <div class="resolucao">
+          <div class="dados">
+            <p>
+              Dados:
+              \[v = 54km/h \quad \Delta s = 1,5m\]
+            </p>
+          </div>
+            <p>
+              Resolução:
+            </p>
+            <p>
+              Inicialmente é necessário deixar as grandezas com as mesmas unidades. Para isso,
+              divide-se a velocidade por \(3,6\) para transformar para \(m/s\).
+              \[v = \frac{54km/h}{3,6} = 15m/s\]
+              \[v=\frac{\Delta s}{\Delta t}\]
+              \[15=\frac{1,5}{\Delta t}\]
+              \[\Delta t=\frac{1,5}{15}\]
+              \[\Delta t=0,1s\]
+            </p>
+
+        </div>
+      </div>
+
+      <div class="exercicios">
+        <h2>Exercícios:</h2>
+        <ol class="enunciado">
+          <li>Calcule a velocidade para cada uma das situações.</li>
+          <ol class="opcoes">
+            <li>\(s_i = 5m\), \(s_f = -3m\), \(t_i = 0s\), \(t_f = 2s\)</li>
+            <li>\(s_i = -3m\), \(s_f = 5m\), \(t_i = 0s\), \(t_f = 2s\)</li>
+            <li>\(\Delta s=55m \) e \(\Delta t = 11s\)</li>
+          </ol>
+
+          <li>Transforme os valores anteriores para \(km/h\).</li>
+
+          <li>Complete as frases com: menor, maior ou igual:
+            <ol class="opcoes">
+              <li>Para um carro se aproximar de outro ele deve possuir 
+                uma velocidade _______ que do outro carro.</li>
+              <li>Para que uma pessoa caminhe ao lado de outra sua velocidade
+                em relação ao solo deve ser ________ a da outra pessoa.
+              </li>
+              <li>Um carro de corrida só observa outro carro o ultrapassar
+                se ele tiver uma velocidade _________ que do outro carro.
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            Em qual tempo um carro com velocidade de \(144km/h\) percorre \(500m\)?
+          </li>
+        </ol>
+      </div>
+    </div>
+  </main>
+{% endblock %}
