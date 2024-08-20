@@ -20,7 +20,7 @@ def detalhes_notas(request, slug):
     return render(request, f'blog/posts/{nota.slug}.html')
 
 def sobre(request):
-    return HttpResponse("Sobre")
+    return render(request, 'blog/sobre.html')
 
 def contato(request):
     return HttpResponse("Contato    ")
