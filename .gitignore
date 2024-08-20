@@ -165,6 +165,7 @@ staticfiles/
 
 #media
 media
+media/img/post
 
 #img
-blog/static/img
+blog/static/img 
