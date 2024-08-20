@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0px;
     font-size: 20px;
     font-family: Roboto;
@@ -14,7 +14,7 @@ main {
 
 /* index */
 
-.card{
+.card {
     width: 100%;
     padding: 5px;
     padding-bottom: 10px;
@@ -22,11 +22,11 @@ main {
     border-bottom: 1px solid #073a55;
 }
 
-main a{
+main a {
     text-decoration: none;
 }
 
-.card img{
+.card img {
     width: calc(100vw - 60px);
     padding: 0;
     margin: 0;
@@ -35,66 +35,69 @@ main a{
     box-shadow: -3px 3px #4a6f81;
 }
 
-.card .data_publicacao{
+.card .data_publicacao {
     font-size: 14px;
     color: #4a6f81;
 }
 
-.card h2, .card p{
+.card h2,
+.card p {
     margin: 0;
 }
 
-main .citacao{
+main .citacao {
     color: #073a55;
     text-align: center;
     font-style: italic;
-    margin: 30px 0px;
+    margin: 30px auto;
 }
 
-main .citacao a:visited{
+main .citacao a:visited {
     color: #073a55;
 }
 
 /* posts */
 
-main .content h1, h2, h3{
+main .content h1,
+h2,
+h3 {
     color: #1A6791;
 }
 
 main .content .introducao,
-main .content .resolucao p{
+main .content .resolucao p {
     color: #4a6f81;
 }
 
 main .content p,
 main .content ol li,
-main .content ul li{
+main .content ul li {
     color: #073a55;
 }
 
-ol.opcoes{
+ol.opcoes {
     list-style-type: lower-alpha;
 }
 
-main .content .exemplo{
+main .content .exemplo {
     background-color: #073a552f;
     padding: 5px;
-    margin: 15px 0px; 
+    margin: 15px 0px;
     border-radius: 5px;
     box-shadow: -3px 3px 10px #073a552f;
 }
 
-main .content img{
+main .content img {
     width: calc(100vw - 60px);
     margin: 10px auto;
 }
 
-main .content .exemplo .dados{
+main .content .exemplo .dados {
     border: 1px dashed #073a55;
     border-radius: 5px;
 }
 
-main .content .container-video-youtube{
+main .content .container-video-youtube {
     display: flex;
     justify-content: center;
 }
@@ -107,17 +110,45 @@ main .content .video-youtube {
     height: calc(9 * 100vw / 16);
 }
 
+main .content .container-geogebra {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+
+main .content .geogebra {
+    margin: 10px auto;
+    max-width: 1080px;
+    max-height: 720px;
+    width: 400px;
+    height: calc(9 * 100vw / 16);
+}
+
+main .content table {
+    border-collapse: collapse;
+    width: 400px;
+}
+
+
+main .content th,
+main .content td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #DDD;
+    color: #073a55;
+}
+
 /* index */
 
-@media (min-width: 600px){
+@media (min-width: 600px) {
 
-    main{
+    main {
         margin: auto;
         max-width: 1400px;
         flex-wrap: wrap;
     }
 
-    .card{
+    .card {
         width: 400px;
         padding: 5px;
         padding-bottom: 10px;
@@ -125,27 +156,44 @@ main .content .video-youtube {
         border-bottom: 1px solid #073a55;
     }
 
-    .card img{
+    .card img {
         width: 400px;
     }
 }
 
 /* posts */
 
-@media (min-width: 600px){
-    .content{
+@media (min-width: 600px) {
+    .content {
         padding: 0px 50px;
         margin: auto;
         width: 900px;
     }
 
-    main .content h1, main .content h2, main .content h3, main .content ul li{
+    main .content h1,
+    main .content h2,
+    main .content h3,
+    main .content ul li {
         width: 100%;
     }
 
-    main .content img{
+    main .content img {
         width: 400px;
         display: flex;
-        justify-content: center;                
+        justify-content: center;
+    }
+
+    main .content table {
+        width: 100%;
+    }
+
+    main .content .container-geogebra {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    main .content .geogebra {
+        width: 100%;
     }
 }
