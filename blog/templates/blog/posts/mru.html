@@ -1,0 +1,245 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<main>
+<div class="content">
+  <h1>MRU (Movimento Retilíneo Uniforme)</h1>
+  <p class="introducao">
+    Na aula anterior foi trabalhado o conceito de <a href="{% url 'nota' slug='velocidade' %}">velocidade</a>. Agora
+    será discutido como uma partícula muda sua posição com velocidade constante, ou seja, que não varia a sua velocidade.
+  </p>
+
+  <h2>Função horária</h2>
+  <p>   
+    O MRU (Movimento Retilíneo Uniforme) é um movimento quando a velocidade não varia. E
+    desta forma, a trajetória do objeto será uma reta e o módulo da velocidade será sempre o mesmo.
+    É extamente isso que significa MRU.
+  </p>                        
+  <p>
+    Para ilustrar o que foi dito anteriormente, imagine que uma partícula está movendo-se
+    horizontalmente e inicia seu movimento na posição \(3m\). Se a partícula possui uma velocidade
+    de \(2m/s\), ou seja, a cada \(segundo\) o objeto avança \(2m\), no próximo \(segundo\), ele estará
+    na posição \(3m+2m = 5m\). Observe a imagem a seguir:
+  </p>
+  <img src="{% static "img/posts/mru1.png" %}" alt="exemplo mru.">
+  <p>
+    E no próximo \(segundo\) será \(+2\) e assim por diante. Pode ser feito uma tabela para demonstrar
+    todas as posições.
+  </p>
+  <table>
+    <tr>
+      <th>\(t(s)\)</th>
+      <th>\(x(m)\)</th>
+    </tr>
+    <tr>
+      <td>\(0\)</td>
+      <td>\(3\)</td>
+    </tr>
+    <tr>
+      <td>\(1\)</td>
+      <td>\(5\)</td>
+    </tr>
+    <tr>
+      <td>\(2\)</td>
+      <td>\(7\)</td>
+    </tr>
+    <tr>
+      <td>\(3\)</td>
+      <td>\(9\)</td>
+    </tr>
+    <tr>
+      <td>\(4\)</td>
+      <td>\(11\)</td>
+    </tr>
+    <tr>
+      <td>\(...\)</td>
+      <td>\(...\)</td>
+    </tr>
+  </table>
+
+  <p>
+    Desta forma, pode-se representar a posição como uma função do tempo. Ou seja, para
+    cada valor de \(t\) haverá um valor de \(x\).
+  </p>
+  <p>
+    Os valores são escritos assim:
+    \[x(0) = 3m\]
+    \[x(1) = 5m\]
+    \[x(2) = 7m\]
+    \[x(3) = 9m\]
+    \[x(4) = 11m\]
+    Que é lido da seguinte maneira: o valor da posição \(x\) no tempo \(0s\) é igual a \(3m\);
+    o valor da posição \(x\) no tempo \(1s\) é igual a \(5m\); e assim por diante.
+  </p>
+  <h2>Função horária</h2>
+  <p>
+    Como a posição está em função do tempo, diz-se que a <strong>função horária</strong>
+    do MRU é:
+    \[x(t) = x_i + v\cdot t\]
+  </p>
+  <p>
+    Estude o exemplo a seguir para compreender a função horária.
+  </p>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>
+      Utilize a função horária para encontrar a posição de um ponto que realiza um MRU,
+      que inicia seu movimento em \(3m\), possui velocidade de \(2m/s\), no tempo de \(7s\).
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados
+          \[x_i = 3m \quad v = 2 m/s \quad t=7s\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[x(t) = x_i + v \cdot t\]
+        \[x(7) = 3 + 2 \cdot 7\]
+        \[x(7) = 3 + 14\]
+        \[x(7) = 21m\]
+        Ou seja, no tempo de \(7s\) a posição da partícula é \(21m\).
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 2</h3>
+    <p>
+      Em que instante de tempo uma partícula que realiza um MRU está na posição \(15m\),
+      se iniciou o movimento em \(2m\) e possui velocidade de \(4m/s\)?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[x_i = 2m \quad v = 4 m/s \quad x(t')=15m\]
+        </p>
+        <p>
+          \(t'\): instante de tempo que a partícula estará na posição \(15m\).
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[x(t') = x_i + v \cdot t'\]
+        \[15 = 2 + 4 \cdot t'\]
+        \[15 - 2 = 4 \cdot t'\]
+        \[13 = 4 \cdot t'\]
+        \[\frac{13}{4} = t'\]
+        \[t' = 3,25s\]
+        Partindo de \(2m\) e com velocidade de \(4m/s\), após \(3,25s\), a partícula estará
+        na posição de \(15m\).
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 3</h3>
+    <p>
+      Em qual instante de tempo a partícula passa pela origem se ela realiza um MRU com movimento
+      retrógrado se a posição inicial é de \(22m\) e módulo da velocidade de \(5m/s\)?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[x_i = 22m \quad v = 5 m/s \quad x(t')=0m\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[x(t') = x_i + v \cdot t'\]
+        \[0 = 22 + (-5) \cdot t'\]
+        \[0 = 22 -5 \cdot t'\]
+        \[5 \cdot t' = 22\]
+        \[t' = \frac{22}{5}\]
+        \[t' = 4,4s\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 4</h3>
+    <p>
+      Duas partículas \(A\) e \(B\) que se movimentam em MRU, uma em direção a outra, 
+      partem de \(10m\) e \(50m\), com módulo de velocidades de \(4m/s\) e \(6m/s\),
+      respectivamente. Qual a posição e instante de tempo do encontro?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[x_{iA} = 10m \quad v_A = 4 m/s\]
+          \[x_{iB} = 50m \quad v_B = 6 m/s\]
+        </p>
+      </div>
+      <p>
+        Resolução: Considere que \(A\) se movimenta no sentido do referencial. Assim:
+        \[
+          \begin{cases}
+            x_A(t) = x_{iA} + v_A \cdot t\\
+            x_B(t) = x_{iB} + v_B \cdot t 
+          \end{cases}
+         \quad 
+        \]
+        \[
+          \begin{cases}
+            x_A(t) = 10 + 4 \cdot t\\
+            x_B(t) = 50 - 6 \cdot t 
+          \end{cases}
+         \quad 
+        \]
+      </p>
+      <p>
+        No tempo \(t'\), \(x_A(t') = x_B(t')\), assim fica:
+        \[x_A(t') = x_B(t')\]
+        \[10 + 4 \cdot t' = 50 - 6 \cdot t' \]
+        \[6 \cdot t' + 4 \cdot t' = 50 - 10 \]
+        \[10 \cdot t' = 40 \]
+        \[t' = \frac{40}{10} \]
+        \[t' = 4s \]
+      </p>
+      <p>
+        Para encontrar a posição, basta substituir \(t'\) em \(x_A(t)\) ou \(x_B(t)\).
+        Escolhendo \(x_A(t)\) pela simplicidade:
+        \[x_A(t') = 10 + 4 \cdot t'\]
+        \[x_A(4) = 10 + 4 \cdot 4\]
+        \[x_A(4) = 10 + 16\]
+        \[x_A(4) = 26m\]
+      </p>
+      <p>
+        Assim, o tempo de encontro é \(4s\) e a posição de encontro é \(26m\).
+      </p>
+    </div>
+  </div>
+
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>
+        Utilize a função horária para encontrar a posição de um ponto que realiza um MRU,
+        que inicia seu movimento em \(10m\), possui velocidade de \(5m/s\), no tempo de \(3s\).
+      </li>
+      <li>
+        Em que instante de tempo uma partícula que realiza um MRU está na posição \(25m\),
+        se iniciou o movimento em \(8m\) e possui velocidade de \(5m/s\)?
+      </li>
+      <li>
+        Em qual instante de tempo a partícula passa pela origem se ela realiza um MRU com movimento
+        progressivo se a posição inicial é de \(-18m\) e módulo da velocidade de \(4m/s\)?
+      </li>
+      <li>
+        Duas partículas \(A\) e \(B\) que se movimentam em MRU no mesmo sentido, 
+        partem de \(10m\) e \(50m\), com módulo de velocidades de \(8m/s\) e \(3m/s\),
+        respectivamente. Qual a posição e instante de tempo do encontro?
+      </li>
+    </ol>
+  </div>
+
+  <p>
+    Na próxima aula será tratado o movimento quando mudar a velocidade, <a href="{% url 'nota' slug='aceleracao' %}">aceleração.</a>
+  </p>
+
+</div>
+</main>
+  {% endblock content %}

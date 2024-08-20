@@ -1,0 +1,103 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<main>
+<div class="content">
+  <h1>Aceleração</h1>
+  <p class="introducao">
+    Outra grandeza importante da Cinemática é a aceleração que é uma graneza da medida
+    da mudança de <a href="{% url 'nota' slug='velocidade' %}">velocidade</a>. Aceleração também é uma grandeza vetorial e por isso têm
+    sentido, direção e módulo.
+  </p>
+  <h2>Definição</h2>
+  <p>
+      A definição de aceleração é dado por:
+      \[\vec{a}=\frac{\Delta \vec{v}}{\Delta t  }\]
+      O calculo é semelhante ao da velocidade. A unidade de aceleração é \( m/s^2\)
+  </p>
+  <h2>Sinal da aceleração</h2>
+  <p>
+    Uma aceleração positiva significa que o valor escalar da velocidade está aumentando,
+     ou seja, de \(2m/s\) a \(5m/s\) ou \(-3m/s\) a \(-1m/s\). 
+  </p>
+  <p>
+    Já uma aceleração negativa indica que o valor escalar da velocidade está diminuindo,
+    ou seja, de \(5m/s\) a \(2m/s\) ou \(-1m/s\) a \(-3m/s\). 
+  </p>
+
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>
+      Qual a aceleração de um carro que parte de \(18km/h\) a \(54km/h\) em \(8s\)?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[v_i = 18km/h = \frac{18}{3,6}m/s = 5m/s\]
+          \[v_f = 54km/h = \frac{54}{3,6}m/s = 15m/s\]
+          \[\Delta t = 8s\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[a = \frac{\Delta v}{\Delta t}\]
+        \[a = \frac{15-5}{8}\]
+        \[a = \frac{10}{8}\]
+        \[a = 1,25m/s^2\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 2</h3>
+    <p>
+      Qual a aceleração de um carro que mantém constante a sua velocidade?
+    </p>
+    <div class="resolucao">
+      <p>
+        Resolução: Como a velocidade não muda, a aceleração é zero.
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 3</h3>
+    <p>
+      Qual a aceleração de um carro que está a \(10m/s\) e inverte o seu sentido de deslocamento
+      e atinge os mesmos \(10m/s\) em móduo durante \(5s\)?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[v_i = 10m/s\]
+          \[v_f = -10m/s\]
+          \[\Delta t = 5s\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[a = \frac{\Delta v}{\Delta t}\]
+        \[a = \frac{-10-10}{5}\]
+        \[a = \frac{-20}{5}\]
+        \[a = -4m/s^2\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exercicios">
+    <ol>
+      <li>Qual a aceleração de um carro que parte de \(36km/h\) a \(72km/h\) em \(4s\)?</li>
+      <li>Qual a aceleração de um carro que está a \(15m/s\) e inverte o seu sentido de deslocamento
+        e atinge os mesmos \(15m/s\) em móduo durante \(3s\)?</li>
+      <li>Se um carro desacelera, qual o sinal da aceleração? Considere o movimento no sentido
+        do referencial.
+      </li>
+      <li>Se o carro acelera, qual o sinal da aceleração? Considere o movimento no sentido
+        do referencial. </li>
+    </ol>
+  </div>
+</div>
+</main>
+  {% endblock content %}

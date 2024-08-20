@@ -1,0 +1,211 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+  <main>
+    <div class="content">
+      <h1>MRUV (Movimento Retilíneo Uniformemente Variado)</h1>
+      <p class="introducao">
+        Outro movimento simples de ser estudado, mas relativamente mais complexo que o
+        <a href="{% url 'nota' slug='mru' %}">MRU</a>, é o MRUV. Ele trata do estudo do movimento quando se tem uma aceleração constante. Ou seja, uma aceleração que não muda seu valor.
+      </p>
+      <h2>Função Horária</h2>
+      <p>Existem duas funções horárias para o MRUV, a da posição e da velocidade: \[s(t) = s_i + v_i t + \frac{at²}{2}\] \[v(t) = v_i + a t\]</p>
+      <p>Observe a tabela a seguir e perceba como a posição varia de maneira diferente que a do MRU. Suponha um movimento como o de jogar um objeto para cima com a mão com as seguintes funções hotárias: \[y(t) = 10t - 5t²\] \[v(t) = 10 - 10t\]</p>
+      <p>Sejam os valores no SI.</p>
+      <table>
+        <tr>
+          <th>t</th>
+          <th>y(t)</th>
+          <th>v(t)</th>
+          <th>a</th>
+        </tr>
+        <tr>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>10.0</td>
+          <td>-10</td>
+        </tr>
+        <tr>
+          <td>0.1</td>
+          <td>0.95</td>
+          <td>9.0</td>
+          <td>-10</td>
+        </tr>
+        <tr>
+          <td>0.2</td>
+          <td>1.8</td>
+          <td>8.0</td>
+          <td>-10</td>
+        </tr>
+        <tr>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>0.9</td>
+          <td>4.95</td>
+          <td>1.0</td>
+          <td>-10</td>
+        </tr>
+        <tr>
+          <td>1.0</td>
+          <td>5.0</td>
+          <td>0.0</td>
+          <td>-10</td>
+        </tr>
+        <tr>
+          <td>1.1</td>
+          <td>4.95</td>
+          <td>-1.0</td>
+          <td>-10</td>
+        </tr>
+        <tr>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+          <td>1.9</td>
+          <td>0.95</td>
+          <td>-9.0</td>
+          <td>-10</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>0</td>
+          <td>-10</td>
+          <td>-10</td>
+        </tr>
+      </table>
+
+      <p>
+        Analisando a tabela, perceba que o valor da posição vertical aumenta até um valor máximo.
+        E posteriormente sai de uma valor máximo e volta a zero. Já o valor da velocidade 
+        inicia em um valor máximo e somente diminui.
+      </p>
+      <p>   
+        Todo esse comportamento ocorre porque a velocidade inicial é positiva e a aceleração 
+        é negativa.
+      </p>
+      <p>
+        O gráfico animado a seguir demonstra melhor esse movimento:
+      </p>
+        <div class="container-geogebra">
+          <iframe class='geogebra' src="https://www.geogebra.org/calculator/rmfuktu8  ?embed" allowfullscreen frameborder="0"></iframe>
+        </div>
+
+      <div class="exemplo">
+        <h3>Exemplo 1</h3>
+        <p> 
+          Qual a posição e velocidade de uma partícula que parte do repouso da posição \(-10m\)
+          e aceleração de \(2m/s²\) no instante de \(5s\)?
+        </p>
+        <div class="resolucao">
+          <div class="dados">
+            <p>
+              Dados:
+              \[s_i = -10m \quad v_i = 0 \]
+              \[a = 2m/s² \quad t'=5s\]
+            </p>
+          </div>
+          <p>
+            Resolução: a função horária da posição é
+            \[s(t) = s_i + v_i t + \frac{at²}{2}\]
+            \[s(t) = -10 + 0 t + \frac{2t²}{2}\]
+            \[s(t) = -10 + t²\]
+            Para encontrar a posição no tempo de 5s:
+            \[s(5) = -10 + 5²\]
+            \[s(5) = 15m\]
+            A função horária da velocidade é:
+            \[v(t) = v_i + a t\]
+            \[v(t) = 0 + 2 t\]
+            \[v(t) = 2 t\]
+            Para encontrar a velocidade no tempo de 5s:
+            \[v(5) = 2 \cdot 5\]
+            \[v(5) = 10m/s\]
+          </p>
+        </div>
+      </div>
+
+      <div class="exemplo">
+        <h3>Exemplo 2</h3>
+        <p>
+            Em qual instante e posição da partícula á máxima, quando inicia o movimento 
+          na origem com velocidade inicial de \(20m/s\) e aceleração \(-4m/s²\)?
+        </p>
+        <div class="resolucao">
+          <div class="dados">
+            <p>
+              Dados:
+              \[s_i = 0 \quad v_i = 20m/s  \quad a = -8m/s²\]
+            </p>
+          </div>
+          <p>
+            A posição da partícula será máxima neste caso quando a velocidade for nula.
+            Assim pode-se calcular o tempo para atingir velocidade zero.
+            \[v(t') = 0\]
+            \[20 - 4t' = 0\]
+            \[20 = 4t'\]
+            \[\frac{20}{4} = t'\]
+            \[t' = 5s\]
+            Para calcular a posição máxima:
+            \[s_{max} = s(t') = 0 + 20t' + \frac{-4t'²}{2}\]
+            \[s_{max} = 20\cdot 5 - 2 \cdot 5²\]
+            \[s_{max} = 100 - 2 \cdot 25\]
+            \[s_{max} = 100 - 50\]
+            \[s_{max} = 50m\]
+          </p> 
+        </div>
+      </div>
+
+      <div class="exemplo">
+        <h3>Exemplo 3</h3>
+        <p>
+          Em qual instante de tempo e qual a velocidade da partícula na origem se a posição
+          inicial é \(-100m\), parte do repouso e possui aceleração de \(2m/s²\)?   
+        </p>
+        <div class="resolucao">
+          <div class="dados">
+            <p>
+              Dados:
+              \[s_i = -100m \quad v_i = 0  \quad a = 2m/s²\]
+            </p>
+          </div>
+          <p>
+            Resolução: Primeiramente se encontra o tempo quando \(s = 0\).
+            \[s(t') = 0\]
+            \[-100 + 0t' + \frac{2t'²}{2} = 0\]
+            \[-100 + t'²= 0\]
+            \[t'²= 100\]
+            \[t'= \sqrt{100}\]
+            \[t'= 10s\]
+            E então se calcula a velocidade usando \(v(t')\):
+            \[v(t') = 0 + 2t'\]
+            \[v(10) = 2 \cdot 10\]
+            \[v(10) = 20m/s\]
+          </p>
+        </div>
+      </div>
+
+      <div class="exercicios">
+        <ol>
+          <li>
+            Qual a posição e velocidade de uma partícula que parte do repouso da posição \(-100m\)
+            e aceleração de \(5m/s²\) no instante de \(5s\)?
+          </li>
+          <li>
+            Em qual instante e posição da partícula á máxima, quando inicia o movimento 
+          na origem com velocidade inicial de \(40m/s\) e aceleração \(-8m/s²\)?
+          </li>
+          <li>
+            Em qual instante de tempo e qual a velocidade da partícula na origem se a posição
+          inicial é \(-32m\), parte do repouso e possui aceleração de \(4m/s²\)?
+          </li>
+        </ol>
+      </div>
+
+    </div>
+  </main>
+{% endblock %}
