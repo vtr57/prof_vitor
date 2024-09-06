@@ -92,10 +92,16 @@
       <p>
         O gráfico animado a seguir demonstra melhor esse movimento:
       </p>
-        <div class="container-geogebra">
-          <iframe class='geogebra' src="https://www.geogebra.org/calculator/rmfuktu8  ?embed" allowfullscreen frameborder="0"></iframe>
-        </div>
+      <div class="container-geogebra">
+        <iframe class='geogebra' src="https://www.geogebra.org/calculator/rmfuktu8  ?embed" allowfullscreen frameborder="0"></iframe>
+      </div>
+      <h2>Equação de Torricelli</h2>
+      <p>
+        É a equação para ser utilizada quando não se precisa calcular o tempo:
+        \[v²=v_i²+2 a \Delta s \]
+      </p>
 
+      <h2>Exemplos</h2>
       <div class="exemplo">
         <h3>Exemplo 1</h3>
         <p> 
@@ -189,6 +195,33 @@
         </div>
       </div>
 
+      <div class="exemplo">
+        <h3>Exemplo 4</h3>
+        <p>
+          Qual a velocidade que uma patícula atinge quando inicia seu movimento
+          com velocidade de \(10m/s\), com aceleração de \(2m/s\) após deslocar por
+          \(50m\)?
+        </p>
+        <div class="resolucao">
+          <div class="dados">
+            <p>Dados:
+              \[v_i = 10m/s \quad a = 2m/s²\]
+              \[\Delta s = 50m\]
+            </p>
+          </div>
+          <p>
+            Resolução:
+            \[v²=v_i²+2 a \Delta s \]
+            \[v²=10²+2 \cdot 2 \cdot 50 \]
+            \[v²=100+200 \]
+            \[v²=300 \]
+            \[v=\sqrt{300} \]
+            \[v \approx 17m/s \]
+          </p>
+        </div>
+      </div>
+
+      <h2>Exercícios</h2>
       <div class="exercicios">
         <ol>
           <li>
@@ -203,9 +236,18 @@
             Em qual instante de tempo e qual a velocidade da partícula na origem se a posição
           inicial é \(-32m\), parte do repouso e possui aceleração de \(4m/s²\)?
           </li>
+          <li>
+            Qual a velocidade que uma patícula atinge quando inicia seu movimento
+          com velocidade de \(-4m/s\), com aceleração de \(3m/s\) após deslocar por
+          \(100m\)?
+          </li>
         </ol>
       </div>
 
+
+      <p>Na próxima aula será estudados sobre as aplicações do MRU e MRUV.
+        O primeiro exemplo será <a href="{% url 'nota' slug='lancamento-vertical'%}">Lançamento Vertical e Queda Livre.</a>
+      </p>
     </div>
   </main>
 {% endblock %}

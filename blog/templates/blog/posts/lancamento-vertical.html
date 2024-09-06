@@ -3,6 +3,182 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Lançamento Vertical e Queda Livre</h1>
+  <p class="introducao">
+    Inicia agora uma sequência de 4 aplicações do 
+    <a href="{% url 'nota' slug='mru'%}">MRU</a> e 
+    <a href="{% url 'nota' slug='mruv'%}">MRUV</a>. Serão usadas as mesmas
+    equações aqui apresentadas, porém aplicadas a cada um dos fenômenos.
+  </p>
+  <h1>Queda Livre</h1>
+  <p>
+    O problema que Galileu abordou durante sua vida com muitas inspirações
+    para toda a física. Aqui será apresentado a sua equação mais relevante que é
+    o tempo de queda:
+  </p>
+  <img src="{% static "img/posts/quedalivre1.png" %}" alt="exemplo de queda Livre ">
+  <div class="container-video-youtube">
+    <iframe  class="video-youtube" src="https://www.youtube.com/embed/E43-CfukEgs?si=EMYEi91WpAfWH99g" title="free fall bbc" frameborder="0" allow="" referrerpolicy="" allowfullscreen></iframe>
+  </div>
+  <p>
+    Perceba que o movimento se inicia numa altura \(h\) e irá finalizar no ponto zero (\(0\)), 
+    cai com aceleração da gravidade de \(g\) e é solto na superfície da Terra, ou seja, 
+    inicia o movimento com velocidade nula. Assim, o tempo de queda é dado por:
+    \[t'=\sqrt{\frac{2h}{g}}\]
+    A velocidade ao final da queda:
+    \[v'=\sqrt{2hg}\]
+  </p>
+
+  <h2>Demonstração tempo de queda livre \(t'\)</h2>
+  <p>
+    A função horária do MRUV fica:
+    \[y(t)=h-\frac{gt²}{2}\]
+    Quando se passar o tempo de queda \(t'\), \(y(t')=0\). Assim para encontrar uma
+    equação para o tempo de queda:
+    \[y(t')=0\]
+    \[h-\frac{gt'²}{2}=0\]
+    \[h=\frac{gt'²}{2}\]
+    \[\frac{2h}{g}=t'²\]
+    \[t'²=\frac{2h}{g}\]
+    \[t'=\sqrt{\frac{2h}{g}}\]
+  </p>
+  <h2>Demonstração velocidade ao final da queda \(v'\)</h2>
+  <p>
+    Utilizando a equação de Torricelli:
+    \[v²=v_i²+2a\Delta s\]
+    \[(-v')²=0²+2(-g)(0-h)\]
+    \[v'²=0²+2gh\]
+    \[v'=\sqrt{2gh}\]
+  </p>
+  
+  <h1>Lançamento Vertical</h1>
+  <p>
+    No lançamento vertical, geralmente se é conhecido a velocidade inicial e a aceleração
+    da gravidade. Se desconhece a altura alcançada e o tempo de lançamento.
+  </p>
+  <p>
+    A altura alcançada é:
+    \[h = \frac{v_i²}{2g}\]
+    E o tempo de lançamento é:
+    \[t' = \frac{2v_i}{g}\]
+  </p>
+  <div class="container-geogebra">
+    <iframe class='geogebra' src="https://www.geogebra.org/calculator/rmfuktu8?embed" allowfullscreen frameborder="0"></iframe>
+  </div>
+  <h2>Demonstração altura alcançada \(h\)</h2>
+  <p>
+    Utiliza-se a equação de Torricelli aplicada ao ponto inicial e ao ponto máximo:
+    \[v²=v_i²+2a\Delta s\]
+    \[0²=v_i²+2(-g)(h-0)\]
+    \[0²=v_i²-2gh\]
+    \[2gh=v_i²\]
+    \[h=\frac{v_i²}{2g}\]
+  </p>
+  <h2>Demonstração tempo de lançamento \(t'\)</h2>
+  <p>
+    Utiliza-se a função horária da velocidade e considerando que o movimento é simétrico.
+    Aplica-se ao ponto inicial e ponto máximo (velocidade nula), assim o tempo de subida é:
+    \[v(t'')=0\]
+    \[v_i+(-g)t''=0\]
+    \[-gt''=-v_i\]
+    \[gt''=v_i\]
+    \[t''=\frac{v_i}{g}\]
+    Para o tempo de lançamento, basta multiplicar o tempo de subida por 2:
+    \[t'=\frac{2  v_i}{g}\]
+  </p>
+  <p>
+    De certa forma, essas demonstrações podem ser consideradas como exemplos.
+  </p>
+
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>
+      Qual o tempo de queda livre e velocidade final
+      para uma altura de \(80m\)? Considere \(g=10m/s²\).
+    </p>
+      <div class="resolucao">
+        <div class="dados">
+          <p>
+            Dados:
+            \[h=80m \quad g=10m/s²\]
+          </p>
+        </div>
+        <p>
+          Resolução:<br> 
+          Para o tempo de queda livre
+          \[t'=\sqrt{\frac{2h}{g}}\]
+          \[t'=\sqrt{\frac{2\cdot80}{10}}\]
+          \[t'=\sqrt{\frac{160}{10}}\]
+          \[t'=\sqrt{16}\]
+          \[t'=4s\]
+          Para a velocidade final:
+          \[v'=\sqrt{2hg}\]
+          \[v'=\sqrt{2\cdot80\cdot10}\]
+          \[v'=\sqrt{1600}\]
+          \[v'=40m/s\]
+        </p>
+      </div>
+    </div>
+    
+    <div class="exemplo">
+      <h3>Exemplo2</h3>
+      <p>
+        Qual o tempo de lançamento e altura máxima
+        atingida que uma partícula alcança lançada a 
+        \(5m/s\) verticalmente? Considere \(g=10m/s²\).
+      </p>
+      <div class="resolucao">
+        <div class="dados">
+          <p>
+            Dados:
+            \[v_i=5m/s \quad g=10m/s²\]
+          </p>
+        </div>
+        <p>
+          Resolução:<br> 
+          Para o tempo de lançamento:
+          \[t' = \frac{2v_i}{g}\]
+          \[t' = \frac{2\cdot5}{10}\]
+          \[t' = \frac{10}{10}\]
+          \[t' = 1s\]
+          Para a altura máxima:
+          \[h = \frac{v_i²}{2g}\]
+          \[h = \frac{5²}{2\cdot10}\]
+          \[h = \frac{25}{20}\]
+          \[h = 1,25m\]
+        </p>
+      </div>
+  </div>
+
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>
+        Encontre a equação para a altura quando a velocidade é a metade do 
+        valor final na queda livre?
+      </li>
+      <li>
+        Em quanto tempo se leva para alcançar um quarto da velocidade final no 
+        lançamento vertical? Considere apenas a ida.
+      </li>
+      <li>
+        Qual o tempo de queda livre e velocidade final
+      para uma altura de \(125m\)? Considere \(g=10m/s²\).
+      </li>
+      <li>
+        Qual o tempo de lançamento e altura máxima
+        atingida que uma partícula alcança lançada a 
+        \(8m/s\) verticalmente? Considere \(g=10m/s²\).
+      </li>
+    </ol>
+  </div>
+
+  <p>
+    A próxima aplicação será 
+    <a href="{%url 'nota' slug='lancamento-horizontal'%}">
+      Lançamento Horizontal</a>.
+  </p>
 
 </div>
 </main>

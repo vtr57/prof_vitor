@@ -3,7 +3,132 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Lançamento Horizontal</h1>
+  <p class="introducao">
+    Esta é a aula da terceira aplicação do <a href="{%url 'nota' slug='mru'%}">MRU</a> e
+     <a href="{%url 'nota' slug='mruv'%}">MRUV</a>. As aplicações
+    são uma excelente maneira para aprender sobre os métodos na Física.
+    E um desses métodos é separar um movimento mais geral em dois movimentos
+    independentes. Você terá de estudar o movimeto em duas dimensões, na vertical
+    e horizontal.
+  </p>
+  <div class="container-geogebra">
+    <iframe class='geogebra' src="https://www.geogebra.org/calculator/gsaeezcv?embed" allowfullscreen frameborder="0"></iframe>
+  </div>
+  <h2>Horizontal</h2>
+  <p>
+    Na horizontal o movimeto é um MRU que se pode colocar o referencial
+    de maneira que a posição inicial na horizontal seja \(0\). A velocidade será
+    \(v_x\) e constante, ou seja, a velocidade inicial é igual em todos os instantes
+    de tempo.
+  </p>
+  <h2>Vertical</h2>
+  <p>
+    Na vertical o movimento é um MRUV com aceleração da gravidade apontando
+    no sentido contrário do referencial. A posição vertical se inicia em um valor
+    \(y(0)=h\). A velocidade \(v_y\) é nula inicialmente e irá variar com
+     aceleração constante \(g\).
+  </p>
+
+  <h2>Funções Horárias</h2>
+  <p>
+    As funções horários serão:
+    <ul>
+      <li>
+        Horizontal:
+          \[x(t)=v_xt\]
+      </li>
+      <li>
+        Vertical:
+          \[y(t)=h-\frac{gt²}{2}\]
+          \[v_y(t)=gt\]
+      </li>
+    </ul>
+  </p>
+
+  <h2>Equação de Torricelli</h2>
+  <p>A equação de Torricelli para a vertical é:
+    \[v_y²=-2g\Delta y\]
+  </p>
+
+  <h2>Tempo de queda \(t'\)</h2>
+  <p>
+    O tempo de queda é o mesmo que o de uma queda livre, o que significa que 
+    qualquer velocidade \(v_x\) não irá modificar o tempo de queda:
+    \[t'=\sqrt{\frac{2h}{g}}\]
+  </p>
+
+  <h2>Alcance \(A\)</h2>
+  <p>
+    O alcance é a distância na horizontal que a partícula percorre no tempo
+    de queda \(t'\):
+    \[A=v_xt'\]
+  </p>
+
+  <h2>Velocidade final</h2>
+  <p>
+    Para se calcular a velocidade da partícula ao tocar o chão é necessário
+    primeiramente calcular \(v_y(y=0)\) na equação de Torricelli. Neste caso o 
+    \(\Delta y = 0-h=-h\). Então a velocidade final na vertical será:
+    \[v_y=\sqrt{2gh}\]
+    Logo a velocidade final \(v\) é:
+    \[v=\sqrt{v_y²+v_x²}\]
+  </p>
+
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>Calcule a o tempo de queda, o alcance e a velocidade final de um lançamento
+      horizontal que inicia de uma altura de \(5m\), com velocidade \(7,5m/s\).
+      Considere \(g=10m/s²\):
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>Dados:
+          \[h=5m \quad v_x=7,5m/s \quad g=10m/s²\]
+        </p>
+      </div>
+      <p>
+        O tempo de queda será:
+        \[t'=\sqrt{\frac{2h}{g}}\]
+        \[t'=\sqrt{\frac{2\cdot5}{10}}\]
+        \[t'=\sqrt{\frac{10}{10}}\]
+        \[t'=\sqrt{1}\]
+        \[t'=1s\]
+        O alcance será:
+        \[A=v_xt\]
+        \[A=7,5\cdot1\]
+        \[A=7,5m\]
+        Para calcular a velocidade final é necessário calcular a velocidade vertical final:
+        \[v_y=\sqrt{2gh}\]
+        \[v_y=\sqrt{2\cdot10\cdot5}\]
+        \[v_y=\sqrt{100}\]
+        \[v_y=10m/s\]
+        A velocidade final é:
+        \[v=\sqrt{v_y²+v_x²}\]
+        \[v=\sqrt{10²+7,5²}\]
+        Como \(7,5\) e \(10\) é \(2,5\) vezes o triângulo pitagórico\((3,4,5)\):
+        \[v=12,5m/s\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exercicios">
+    <ol class="exercicios">
+      <li>
+        Calcule a o tempo de queda, o alcance e a velocidade final de um lançamento
+      horizontal que inicia de uma altura de \(20m\), com velocidade \(15m/s\).
+      Considere \(g=10m/s²\):
+      </li>
+      <li>
+        Qual cai antes, uma partícula em queda livre ou uma partícula lançada horizontalmente
+        da mesma altura? Justifique sua resposta.
+      </li>
+    </ol>
+  </div>
+
+  <p>A próxima aplicação será o 
+    <a href="{%url 'nota' slug='lancamento-obliquo'%}">Lançamento Oblíquo.</a></p>
 
 </div>
 </main>
-  {% endblock content %}
+{% endblock content %}

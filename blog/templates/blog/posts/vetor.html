@@ -1,0 +1,186 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<main>
+<div class="content">
+  <h1>Vetor</h1>
+  <p class="introducao">
+    O vetor é um objeto matemático extremamente útil na Física.
+    Há dversas aplicações e é fundamental que você compreenda como usá-lo.
+  </p>
+
+  <h2>Definição</h2>
+  <p>
+    \[\vec{v}\]
+    Um vetor é uma "flecha" que indica intensidade, direção e sentido. E com isso
+    se passa essas 3 informações de uma grandeza física. Por exemplo a grandeza
+    força é representada por um vetor. A intensidade de uma força (representada
+    pelo módulo de um número), a sua direção (representada por um ângulo) e o seu
+    sentido (representada pela ponta da flecha do vetor).
+  </p>
+
+  <div class="container-geogebra">
+    <iframe class='geogebra' src="https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_all.html " allowfullscreen frameborder="0"></iframe>
+  </div>
+
+  <h2>Notação</h2>
+  <p>Escreve-se um vetor \(\vec v\) como:
+    \[\vec{v}=(v_x,v_y)\]
+  </p>
+  <img src="{% static "img/posts/decomposicao_vetor.png" %}" alt="">
+  
+  <h2>Intensidade</h2>
+  <p>
+    A intensidade \(v\) de um vetor é o módulo do vetor, ou seja:
+    \[|\vec v|=v=\sqrt{v_x²+v_y²}\]
+  </p>
+
+  <h2>Direção</h2>
+  <p>
+    É o ângulo que ele faz com a horizontal:
+    \[\theta=arctg(\frac{v_y}{v_x})\]
+  </p>
+
+  <h2>Decomposição</h2>
+  <p>
+    É sempre possível decompor um vetor nas direções de suas coordenadas. Por exemplo,
+    nas direções \(x\) e \(y\).
+    <ul>
+      <li>Na direção \(x\):
+        \[v_x=v\cdot cos(\theta)\]
+      </li>
+      <li>Na direção \(y\):
+        \[v_y=v\cdot sen(\theta)\]
+      </li>
+    </ul>
+  </p>
+
+
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>
+      Qual a representação de um vetor de componente horizontal \(3\) e componente
+      vertical \(4\), qual a intensidade e direção?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[v_x=3 \quad v_y=4\]
+        </p>
+      </div>
+      <p>
+        Resolução:<br>
+        Representação:
+        \[\vec v=(3,4)\]
+        Intensidade:
+        \[v=\sqrt{(3)²+(4)²}\]
+        \[v=\sqrt{9+16}\]
+        \[v=\sqrt{25}\]
+        \[v=5\]
+        Direção:
+        \[\theta=arctg(\frac{v_y}{v_x})\]
+        <a href="https://www.wolframalpha.com/input?i=arctan%284%2F3%29" target="_blank">\[\theta=arctg(\frac{4}{3 })\]</a>
+        \[\theta\approx53°\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 2</h3>
+    <p>Qual a representação de um vetor que possui intensidade \(10\)
+      e direção de 30°?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[v=10 \quad \theta = 30°\]
+        </p>
+      </div>
+      <p>
+        Resolução:<br>
+        Em x:
+        \[v_x=v\cdot cos(\theta)\]
+        \[v_x=10\cdot cos(30°)\]
+        \[v_x=10\frac{\sqrt3}{2}\]
+        \[v_x=5\sqrt3\]
+        Em y:
+        \[v_y=v\cdot sen(\theta)\]
+        \[v_y=10\cdot sen(30°)\]
+        \[v_y=10\frac{1}{2}\]
+        \[v_y=5\]
+        A representação será:
+        \[\vec v=(5\sqrt 3, 5)\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 3</h3>
+    <p>
+      Qual o vetor soma e sua intensidade de \(\vec v=(3,0)\) com
+      \(\vec u=(4,0)\)?
+    </p>
+    <div class="resolucao">
+      <p>
+        Resolução:<br>
+        Vetor soma:
+        \[\vec v + \vec u = (3,0) + (4,0)\]
+        \[\vec v + \vec u = (3+4,0+0)\]
+        \[\vec v + \vec u = (7,0)\]
+        Intensidade:
+        \[|\vec v + \vec u | = \sqrt{7²+0²}\]
+        \[|\vec v + \vec u | = \sqrt{49}\]
+        \[|\vec v + \vec u | = 7\]
+      </p>
+    </div>
+  </div>
+  
+  <div class="exemplo">
+    <h3>Exemplo 4</h3>
+    <p>
+      Qual o vetor diferença e sua intensidade de \(\vec v=(3,0)\) com
+      \(\vec u=(4,0)\)?
+    </p>
+    <div class="resolucao">
+      <p>
+        Resolução:<br>
+        Vetor soma:
+        \[\vec v - \vec u = (3,0) - (4,0)\]
+        \[\vec v - \vec u = (3-4,0-0)\]
+        \[\vec v - \vec u = (-1,0)\]
+        Intensidade:
+        \[|\vec v - \vec u | = \sqrt{(-1)²+0²}\]
+        \[|\vec v - \vec u | = \sqrt{1}\]
+        \[|\vec v - \vec u | = 1\]
+      </p>
+    </div>
+  </div>
+
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>Qual a representação de um vetor de componente horizontal \(6\) e componente
+        vertical \(8\), qual a intensidade e direção?</li>
+        <li>
+          Qual a representação de um vetor que possui intensidade \(20\)
+      e direção de 60°?
+        </li>
+        <li>
+          Qual o vetor soma e sua intensidade de \(\vec v=(2,1)\) com
+      \(\vec u=(2,2)\)?
+        </li>
+        <li>
+          Qual o vetor diferença e sua intensidade de \(\vec v=(10,7)\) com
+      \(\vec u=(2,1 )\)?
+        </li>
+    </ol>
+  </div>
+  <p>
+    Na aula a seguir, será iniciado o primeiro assunto da Cinemática: <a href="{% url 'nota' slug='referencial' %}">Referencial.</a>
+  </p>
+</div>
+</main>
+  {% endblock content %}

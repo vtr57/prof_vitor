@@ -3,6 +3,140 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Lançamento Oblíquo</h1>
+  <p class="introducao">O lançamento oblíquo é a última aplicação de <a href="{%url 'nota' slug='mru'%}">MRU</a> e
+    <a href="{%url 'nota' slug='mruv'%}">MRUV</a> que será trabalhado.
+    E é a mais desafiadora. Mas nessa aula você terá o passo a passo
+    para compreender todas as equações envolvidas nessa fenômeno.
+  </p>
+
+  <div class="container-geogebra">
+    <iframe class='geogebra' src="https://www.geogebra.org/calculator/cv4d5sp8" allowfullscreen frameborder="0"></iframe>
+  </div>
+
+  <h2>Compreendendo o fenômeno</h2>
+  <p>
+    A partícula é lançada obliquamente, o que significa dizer que será lançada com 
+    velocidade \(\vec{v}\) formando um ângulo \(\theta\) com a horizontal. A velocidade
+    em qualquer instante pode ser decomposta nas direções horizontal e vertical, assim
+    como o lançamento horizontal. Na horizontal o movimento executa um MRU, com velocidade
+    \(\vec{v_x}\) e na vertical um MRUV, com aceleração \(\vec{g}\) no sentido oposto ao
+    eixo \(y\). 
+  </p>
+  <img src="{% static "img/posts/decomposicao_vetor.png" %}" alt="decomposiçãao vetor na vertical e horizontal.">
+
+  <h3>Horizontal</h3>
+  <p>
+    Na horizontal o movimento é um MRU e tem as seguintes equações:
+    \[v_x = v\cdot cos(\theta)\]
+    \[x(t)=v_xt\]
+  </p>
+
+  <h3>Vertical</h3>
+  <p>
+    Na vertical o movimento é um MRUV e tem as seguintes equações:
+    \[v_y = v\cdot sen(\theta)\]
+    \[y(t)=v_{iy}t-\frac{gt²}{2}\]
+    \[v_y(t)=v_{iy}-gt\]
+    \[v_y²=v_{iy}²-2g\Delta y\]
+  </p>
+  <p>
+    Note que somente na vertical aparece uma velocidade inicial \(v_{iy}\). E a todo
+    instante tem-se:
+    \[v²=v_x²+v_y²\]
+  </p>
+
+  <h2>Tempo de lançamento \(t'\)</h2>
+  <p>
+    O tempo de lançamento pode ser encontrado substituindo \(t'\) em \(y(t)=0\). Assim:
+    \[y(t')=0\]
+    \[v_{iy}t'-\frac{gt'²}{2}=0\]
+    \[t'(v_{iy}-\frac{gt'}{2})=0\]
+    O que nos retorna duas soluções, \(t'=0\) ou \(v_{iy}-\frac{gt'}{2}=0\). A segunda é
+    a que nos interessa:
+    \[v_{iy}-\frac{gt'}{2}=0\]
+    \[\frac{gt'}{2}=v_{iy}\]
+    \[t'=\frac{2v_{iy}}{g}\]
+    
+  </p>
+
+  <h2>Alcance \(A\)</h2>
+  <p>
+    O alcance é a distância na horizontal ao tocar o solo. Ou seja, \(A=x(t')\):
+    \[A=v_xt'\]
+    \[A=v_icos(\theta)\frac{2v_{iy}}{g}\]
+    \[A=\frac{2v_icos(\theta)v_isen(\theta)}{g}\]
+    \[A=\frac{v_i²sen(2\theta)}{g}\]
+  </p>
+
+  <h2>Altura Máxima \(H\)</h2>
+  <p>
+    A altura máxima ocorre quando a \(v_y=0\). Utilizando Torricelli:
+    \[v_y²=v_{iy}²-2g\Delta y\]
+    \[0²=v_{iy}²-2g(H-0)\]
+    \[0=v_{iy}²-2gH\]
+    \[2gH=v_{iy}²\]
+    \[H=\frac{v_{iy}²}{2g}\]
+    \[H=\frac{(vsen(\theta))²}{2g}\]
+    \[H=\frac{v²sen²(\theta)}{2g}\]
+  </p>
+
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>
+      Em um lançamento oblíquo, com velocidade inicial de \(10m/s\) e ângulo de
+      lançamento de \(30°\), encontre o tempo de lançamento, o alcance e a altura máxima.
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[v_i=10m/s \quad \theta = 30°\]
+        </p>
+      </div>
+      <p>
+        Resolução:<br>
+        Tempo de lançamento:
+        \[t'=\frac{2v_{iy}}{g}\]
+        \[t'=\frac{2v_isen(\theta)}{10}\]
+        \[t'=\frac{2\cdot10sen(30°)}{10}\]
+        \[t'=\frac{2\cdot\cancel{10}sen(30°)}{\cancel{10}}\]
+        \[t'=2\cdot\frac{1}{2}\]
+        \[t'=1s\]
+        Alcance:
+        \[A=\frac{v_i²sen(2\theta)}{g}\]
+        \[A=\frac{10²sen(2\cdot30°)}{10}\]
+        \[A=10sen(60°)\]
+        \[A=10\frac{\sqrt3}{2}\]
+        \[A=5\sqrt3m\]
+        Altura máxima:
+        \[H=\frac{v²sen²(\theta)}{2g}\]
+        \[H=\frac{10²sen²(30°)}{2\cdot10}\]
+        \[H=\frac{10\cancel{^2}sen²(30°)}{2\cdot\cancel{10}}\]
+        \[H=\frac{\cancel{10}(\frac{1}{2})²}{\cancel{2}}\]
+        \[H=5\frac{1²}{2²}\]
+        \[H=\frac{5}{4}m\]
+        \[H=1,25m\]
+      </p>
+    </div>
+  </div>
+
+
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>
+        Em um lançamento oblíquo, com velocidade inicial de \(20m/s\) e ângulo de
+        lançamento de \(60°\), encontre o tempo de lançamento, o alcance e a altura máxima.
+      </li>
+      <li>
+        Qual o ângulo que provoca \(H=A/2\)?
+      </li>
+      <li>
+        Qual o ângulo que provoca \(A=H/2\)?
+      </li>
+    </ol>
+  </div>
+
 
 </div>
 </main>

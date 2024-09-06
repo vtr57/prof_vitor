@@ -163,7 +163,7 @@ cython_debug/
 # db.sqlite3
 staticfiles/
 
-#media
+#media      
 media
 media/img/post
 

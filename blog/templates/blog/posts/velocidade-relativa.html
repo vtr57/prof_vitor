@@ -1,0 +1,138 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<main>
+<div class="content">
+  <h1>Velocidade Relativa</h1>
+  <p class="introducao">
+    A velocidade relativa é de fundamental importância ser estudado pois na realidade todas as velocidades
+    são relativas a um referencial. E para se compreender a relatividade de Einstein, é de fundamental importância
+    estudar velocidade relativa. E como pré-requisito desa aula, é importante saber sobre a aula de
+    <a href="{%url 'nota' slug='vetor'%}" target="_blank" >Vetor.</a>
+  </p>
+
+  <h2>Definição</h2>
+  <p>
+    Este problema envolve 2 partículas \(A\) e \(B\) e 1 referencial \(O\). E será colocado um referencial
+    em cada uma das partículas. Assim tem-se:
+    <ul>
+      <li>A velocidade que \(A\) tem em relação ao referencial \(O\) é \(\vec v_A\)</li>
+      <li>A velocidade que \(B\) tem em relação ao referencial \(O\) é \(\vec v_B\)</li>
+      <li>A velocidade que \(A\) tem em relação a \(B\) é \(\vec v_{BA}\)</li>
+    </ul>
+  </p>
+  <p>
+    E a definição de \(\vec v_{BA}\) é:
+    \[\vec v_{BA} = \vec v_{A} - \vec v_{B}\]
+    A velocidade \(\vec v_{BA}\) é a lida como a velocidade que \(A\) tem em relação a \(B\).
+  </p>
+
+  <h2>Experimento</h2>
+  <p>
+    No vídeo a seguir você percebe que a esfera não se move em relação a superfície da Terra. Isso ocorreu
+    porque a velocidade da esfera em relação ao carro é igual em módulo a velocidade do carro em relação a
+    Terra, porém em sentidos opostos. E por isso ela se anula.
+  </p>
+  <div class="container-video-youtube">
+    <iframe class="video-youtube" src="https://www.youtube.com/embed/BLuI118nhzc?si=GbGDTW-bRQJHf7aC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <p>
+    Suponha que o carro tenha velocidade \(\vec v_{carro} = (80,0)km/h\) em relação a Terra
+     e a esfera tenha velocidade de \(\vec v_{carro,esfera} = (-80,0)km/h\) em relação ao carro. Assim,
+     a velocidade da esfera em relação a Terra será (\(\vec v_{esfera}\)):
+     \[\vec v_{BA} = \vec v_{A} - \vec v_{B}\]
+     \[\vec v_{carro,esfera} = \vec v_{esfera} - \vec v_{carro}\]
+     \[\vec v_{carro,esfera} + \vec v_{carro} = \vec v_{esfera}\]
+     \[\vec v_{esfera} = \vec v_{carro,esfera} + \vec v_{carro}\]
+     \[\vec v_{esfera} = (-80,0) + (80,0)\]
+     \[\vec v_{esfera} = (-80+80,0+0)\]
+     \[\vec v_{esfera} = (0,0)\]
+  </p>
+
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1: em 1 dimensão</h3>
+    <p>
+      Considere duas partículas que se movimentam a \(v_A = 5m/s\) e a outra a
+       \(v_B = 3m/s\) em sentidos opostos na mesma direção. Qual a velocidade de \(A\) em
+       relação a \(B\)?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[\vec v_A = (5,0)m/s \quad \vec v_B = (-3,0)m/s\]
+          Considere um referencial que aponta no mesmo sentido da velocidade \(\vec v_A\), por isso
+          o seu valor algébrico é positivo.
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[\vec v_{BA} = \vec v_{A} - \vec v_{B}\]
+        \[\vec v_{BA} = (5,0) - (-3,0)\]
+        \[\vec v_{BA} = (5-(-3),0-0)\]
+        \[\vec v_{BA} = (5+3,0)\]
+        \[\vec v_{BA} = (8,0)m/s\]
+        Ou seja, a velocidade de \(A\) em relação a \(B\) é de \(v_{BA} = 8m/s\). Perceba que o valor 
+        algébrico de \(v_{BA}\) é positivo, ou seja, se movimenta no mesmo sentido de \(v_A\)
+      </p>
+    </div>
+  </div>
+  
+  <div class="exemplo">
+    <h3>Exemplo 2: em 1 dimensão</h3>
+    <p>
+      Considere duas partículas que se movimentam a \(v_A = 5m/s\) e a outra a
+       \(v_B = 3m/s\) em sentidos opostos na mesma direção. Qual a velocidade de \(B\) em
+       relação a \(A\)?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[\vec v_A = (5,0)m/s \quad \vec v_B = (-3,0)m/s\]
+          Considere um referencial que aponta no mesmo sentido da velocidade \(\vec v_A\), por isso
+          o seu valor algébrico é positivo.
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[\vec v_{AB} = \vec v_{B} - \vec v_{A}\]
+        \[\vec v_{AB} = (-3,0) - (5,0)\]
+        \[\vec v_{AB} = (-3-5),0-0)\]
+        \[\vec v_{AB} = (-8,0)m/s\]
+        Ou seja, a velocidade de \(B\) em relação a \(A\) é de \(v_{AB} = -8m/s\). Perceba que o valor 
+        algébrico de \(v_{AB}\) é negativo, ou seja, se movimenta no mesmo sentido de \(v_B\)
+      </p>
+    </div>
+  </div>
+
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>
+        Se uma pessoa anda numa esteira com velocidade de \(0,8m/s\) em relação a esteira e a esteira
+        se movimenta a \(2m/s\) em relação ao solo, ambas no mesmo sentido. Qual a velocidade da pessoa em
+        relação ao solo?
+      </li>
+      <li>
+        Se uma pessoa anda numa esteira com velocidade de \(0,8m/s\) em relação a esteira e a esteira
+        se movimenta a \(2m/s\) em relação ao solo, mas no sentido contrário. Qual a velocidade da pessoa em
+        relação ao solo?
+      </li>
+      <li>
+        Um barco possui velocidade de \(8m/s\) sobre um lago.  Já um rio possui velocidade de \(6m/s\). Qual a
+        velocidade do barco observado por um referencial da Terra quando ele está sobre esse rio e tenta
+        atravessá-lo perpendicularmente? Observe a simulação a seguir.
+      </li>
+    </ol>
+  </div>
+
+  <div class="container-geogebra">
+    <iframe class='geogebra' src="https://www.geogebra.org/classic/crd6xygs " allowfullscreen frameborder="0"></iframe>
+  </div>
+  
+
+</div>
+</main>
+  {% endblock content %}

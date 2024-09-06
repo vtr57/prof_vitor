@@ -25,6 +25,6 @@ O arquivo html deve se preenchido internamente a tag `<div class="content">`.
 | Enunciado exercício | `<ol class="enunciado">`|
 | Opções dos exercícios | `<ol class="enunciado"><ol class="opcoes">`|
 | link para outra nota | `<a href="{% url 'nota' slug='{nota.slug}' %}">` |
-| vídeo YouTube | `<div class="container-video-youtube"><iframe class="video-youtube" src="" title="" frameborder="0" allow="" referrerpolicy="" allowfullscreen>`|
-| geogebra | `<div class="container-geogebra"><iframe class='geogebra' src="" allowfullscreen frameborder="0"></iframe></div>` |
+| vídeo YouTube | `<div class="container-video-youtube"><iframe class="video-youtube" src="" title="" frameborder="0" allow="" referrerpolicy="" allowfullscreen></iframe></div>`|
+| simulações| `<div class="container-geogebra"><iframe class='geogebra' src="" allowfullscreen frameborder="0"></iframe></div>` |
 |Imagem| `<img src="{% static "img/posts/{nome da imagem}.png" %}" alt="texto alternativo">` |
