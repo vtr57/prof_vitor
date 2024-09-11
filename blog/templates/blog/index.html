@@ -4,7 +4,7 @@
 {% block content %}
 
 <main>
-    {% for nota in notas_publicadas %}
+    {% for nota in page_obj      %}
     <a href="{% url 'nota' slug=nota.slug %}">
     <div class="card">
         <img src="{{ nota.banner.url }}" alt="">
@@ -13,6 +13,24 @@
     </div>
     </a>
     {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; primeira</a>
+                <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
+            {% endif %}
+
+            <span class="current">
+                <p>Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.</p>
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">próxima</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+            {% endif %}
+        </span>
+    </div>  
 
     <div class="citacao">
         <h2><a href="https://citacoes.in/autores/cesar-lattes/" target="_blank">“A ciência não pode prever o que vai acontecer. Só pode prever a probabilidade de algo acontecer.”</a></h2>

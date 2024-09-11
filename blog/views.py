@@ -1,15 +1,19 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
+from django.core.paginator import Paginator
+
 
 
 from .models import NotasAula
 
 def index(request):
     notas_publicadas = NotasAula.objects.filter(status_publicado=True).order_by('-data_publicacao')
-    context = {
-        'notas_publicadas': notas_publicadas,
-    }
+    paginator = Paginator(notas_publicadas, 10)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {'page_obj': page_obj}
     return render(request, 'blog/index.html', context)
 
 def detalhes_notas(request, slug):
