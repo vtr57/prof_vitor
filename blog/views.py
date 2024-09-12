@@ -9,7 +9,7 @@ from .models import NotasAula
 
 def index(request):
     notas_publicadas = NotasAula.objects.filter(status_publicado=True).order_by('-data_publicacao')
-    paginator = Paginator(notas_publicadas, 10)
+    paginator = Paginator(notas_publicadas, 9)
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
