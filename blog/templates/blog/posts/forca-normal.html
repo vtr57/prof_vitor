@@ -3,6 +3,113 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Força Normal (\(\vec N \))</h1>
+  <p class="introducao">
+    A força normal é uma força de contato que ocorre entre as superfícies quando
+    estão em contato uma com a outra. Aparece em muitos contextos juntamente com 
+    a <a href="{%url 'nota' slug='forca-peso'%}">força peso</a>, estudada na aula anterior.
+  </p>
+
+  <h2>Definição Força Normal</h2>
+  <p>A força normal não possui nenhuma equação propriamente para calcular o seu 
+    módulo, depende de cada contexto. É utilizada a 2ª LN para encontrar o seu valor.
+  </p>
+  <p>
+    A direção da força normal é perpendicular ao plano de contato entre dois corpos. E o
+    seu sentido é contrário ao sentido de encontro dos corpos. Como na imagem a seguir:
+  </p>
+  <img src="{% static 'img/posts/Força Normal Exemplo.png' %}" alt="exemplos de força normal">
+  
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>Qual a força normal de um corpo de massa 5kg que está sobre uma superfície horizontal?
+      Considere g=10m/s².
+    </p>
+    <img src="{% static 'img/posts/Força Normal Exemplo1.png' %}" alt="corpo sobre uma superfície horizontal. ">
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[m=5kg \quad g=10m/s²\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        Neste contexto se tem o eixo positivo para cima, a força normal aponta para cima
+        e a força gravitacional aponta para baixo. Assim a 2ª LN fica:
+        \[\vec F_R = m\vec a\]
+        \[\vec N + \vec F_g = m(\vec0)\]
+        O seu valor algébrico será:   
+        \[N - F_g = 0\]
+        \[N - mg = 0\]
+        \[N = mg\]
+        \[N = 5\cdot10\]
+        \[N = 50N\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h2>Exemplo 2</h2>
+    <p>
+      Qual a força normal sobre um corpo de massa de \(5kg\) que está na iminência do movimento
+      que que está sobre uma plano inclinado de \(60°\) com a horizontal?
+    </p>
+    <img src="{% static 'img/posts/Força Normal Exemplo2.png' %}" alt="exemplo 2 de força normal em um plano inclinado.">
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[\theta = 60° \quad m = 5kg \quad g=10m/s²\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        Para resolver este problema deverá ser retomado a aula sobre
+        <a href="{%url 'nota' slug='vetor'%}">vetores</a>. Em que o vetor Normal será
+        decomposto e utilizado eixo \(x\) e \(y\).  
+      </p>
+      <img src="{% static 'img/posts/Força Normal Exemplo - Resolução.png' %}" alt="resolução do exemplo 2 de força normal. ">
+      <p>
+        Na direção do eixo \(y\) tem-se a \(\vec F_{Ry}\):
+        \[F_{Ry} = ma_y\]
+        \[N - F_{gy} = m(0)\]
+        \[N - F_{gy} = 0\]
+        \[N = F_{gy}\]
+        A força gravitacional na direção de \(y\) é:
+        \[F_{gy} = mgcos(\theta)\]
+        \[F_{gy} = 5\cdot10\cdot cos(60)\]
+        \[F_{gy} = 50\frac{1}{2}\]
+        \[F_{gy} = \frac{50}{2}\]
+        \[F_{gy} = 25N\]
+        Então a força normal será:
+        \[N = F_{gy}\]
+        \[N = 25N\]
+      </p>
+    </div>
+  </div>
+
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>
+        Qual a força normal de um corpo de massa 7,5kg que está sobre uma superfície horizontal?
+        Considere g=10m/s².
+      </li>
+      <li>
+        Qual a força normal sobre um corpo de massa de \(6kg\) que está na iminência do movimento
+        que que está sobre uma plano inclinado de \(30°\) com a horizontal? 
+        Considere \(cos(30°) = 0,7\).
+      </li>
+    </ol>
+  </div>
+
+  <p>
+    A aula seguinte será sobre a força de 
+    <a href="{%url 'nota' slug='forca-de-tensao'%}">Tensão</a>, que ocorre em cabos e cordas.
+  </p>
+
 
 </div>
 </main>
