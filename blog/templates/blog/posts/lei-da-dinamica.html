@@ -3,6 +3,117 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Lei da Dinâmica (2ª Lei de Newton)</h1>
+  <p class="introducao">A 2ªLN é uma das equações mais importantes de toda a história da física. A nível
+    de ensino médio ela será capaz de explicar alguns movimentos como o MRUV e o MHS,
+    por exemplo. A <a href="{%url 'nota' slug='lei-da-inercia'%}">1ªLN</a> é fundamental
+    ser estudada anteriormente, pois ela deixa claro que mudança de movimento está relacionada
+    a força resultante.
+  </p>
+
+  <h2>Enunciado da 2ªLN</h2>
+  <p>
+    \[\vec F_R = m\vec a\]
+    Sendo \(\vec F_R\) a força resultante medida em \(N\), \(m\) a massa do corpo medida em \(kg\) e
+    \(\vec a\) a aceleração medida em \(m/s\).
+  </p>
+  <p>
+    Ou seja, <a href="{%url 'nota' slug='forca-resultante'%}">Força Resultante</a> provoca
+    uma aceleração em um corpo que é inversamente proporcional a massa de um corpo.
+    Em termos práticos, se você aplicar toda a sua força em um carrinho de supermercado 
+    cheio de compras, ele acelerará devagar, mas se ele estiver vazio, ele acelerará rapidamente.
+  </p>
+
+  <div class="container-geogebra">
+    <iframe class='geogebra' src="https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html  " allowfullscreen frameborder="0"></iframe>
+  </div>
+
+  <h2>Massa</h2>
+  <p>
+    A massa é a grandeza que relaciona a 1ªLN com a 2ªLN, pois ela é uma medida de inércia.
+    Lembre que inércia é a propriedade da matéria que dificulta a mudança de velocidade e massa
+    é a maneira de se medir inércia, ou seja, quanto maior a massa maior a inércia de um 
+    corpo.
+  </p>
+
+  <h2>Aceleração</h2>
+  <p>A aceleração estará sempre presente agindo sobre um corpo quando uma força resultante
+    estiver atuando e vice-versa. O vetor aceleração aponta na mesma direção e sentido da
+    força resultante.
+  </p>
+
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>Se a força resultante tem módulo de \(500N\) e o corpo possui \(125kg\) de massa,
+      qual a aceleração?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>Dados:
+          \[|\vec F_R| = 500N \quad m=125kg\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[|\vec F_R| = m|\vec a|\]
+        \[500 = 125a\]
+        \[\frac{500}{125} = a\]
+        \[a = \frac{500}{125}\]
+        \[a = 4m/s²\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 2</h3>
+    <p>Considere a aplicação de forças abaixo sobre uma partícula de \(20kg\), considere \(|\vec F_1| = 200N\) e
+      \(|\vec F_2| = 300N\), qual a aceleração?
+    </p>
+    <img src="{% static "img/posts/forca1forca2.png" %}" alt="">
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[m = 20kg \quad |\vec F_1| = 200N\]
+          \[|\vec F_2| = 300N\]
+        </p>
+      </div>
+      <p>
+        Resolução: pela 2ªLN tem-se
+        \[\vec F_R = m\vec a\]
+        \[\vec F_1 + \vec F_2 = m\vec a\]
+        \[200 + (-300) = 20 a\]
+        \[200-300 = 20 a\]
+        \[-100 = 20 a\]
+        \[20a = -100\]
+        \[a = \frac{-100}{20}\]
+        \[a = -5m/s²\]
+        E a aceleração aponta no sentido contrário ao referencial, assim como a força
+        resultante.
+      </p>
+    </div>
+  </div>
+
+  <h2>Exercícios</h2>
+  <ol class="enunciado">
+    <li>
+      Se a força resultante tem módulo de \(350N\) e o corpo possui \(25kg\) de massa,
+      qual a aceleração?
+    </li>
+    <li>
+      <p>Considere a aplicação de forças abaixo sobre uma partícula de \(15kg\), considere \(|\vec F_1| = 300N\) e
+        \(|\vec F_2| = 210N\), qual a aceleração?
+      </p>
+      <img src="{% static "img/posts/forca1forca2.png" %}" alt="">
+    </li>
+  </ol>
+
+  <p>Na aula seguinte será iniciado os tipos de força e primeiramente a força 
+    <a href="{%url 'nota' slug='forca-peso'%}">Peso.</a>
+  </p>
+
+
 
 </div>
 </main>

@@ -3,6 +3,100 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Força Peso (\(\vec P\))</h1>
+  <p class="introducao">
+    A força peso (\(\vec P\)) é de conhecimento comum de todas as pessoas. No entanto,
+    cientificamente será mostrada principalmente sua diferença com a conceito de massa,
+    visto na aula de <a href="{%url 'nota' slug='lei-da-dinamica'%}">2ª LN.</a>
+  </p>
+
+  <h2>Força Gravitacional (\(\vec F_g\))</h2>
+  <p>Antes de explicar a força peso, é necessário falar sobre a força gravitacional, que
+    será tratada em mais detalhes futuramente. A força gravitacional é a força que o 
+    planeta Terra exerce sobre os corpos ao cairem livremente, ou seja, em queda livre.
+  </p>
+  <p>
+    Viu-se que o corpo que cai em queda livre possui aceleração igual a \(\vec g\). Assim,
+    pela 2ªLN, a força resultante será a prórpia força gravitacional e a aceleração do corpo
+    será a aceleração da gravidade.
+    \[\vec F_R = m\vec a\]
+    \[\vec F_g = m\vec g\]
+    Assim o módulo da força gravitacional será \(F_g = mg \).
+  </p>
+
+  <h2>Peso \(\vec P\)</h2>
+  <p>
+    A força peso, muito comumente confundida com a massa e também com a força gravitacional,
+    é uma força que é exercida sobre o corpo para deixá-lo em repouso na superfície da Terra.
+  </p>
+  <p>
+    O módulo da força será:
+    \[P = mg\]
+    O mesmo da força gravitacional pois é a outra e única força que atua e em sentido oposto.
+  </p>
+  <img src="{% static "img/posts/Força Peso e Gravitacional.png" %}" alt="texto alternativo">
+
+  <h2>Peso X massa</h2>
+  <p>Por mais que no senso comum se fale "Qual o seu peso?" e você responde "\(60 kg\)",
+    o peso é uma força e como toda força é medida em newtons (\(N\)). Então, para reiterar,
+    massa é uma grandeza <strong>escalar</strong> que mede a inércia, a dificuldade de acelerar. Já o peso
+    é uma força, uma grandeza <strong>vetorial</strong> que se faz para deixar um corpo em equilíbrio
+  </p>
+
+  <h2>Unidade newton</h2>
+  <p>Agora se pode ter uma sensação de quanto é \(1N\) de força. É a força que se faz para
+    segurar 100g de qualquer corpo.
+  </p>
+
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>Qual o peso de um corpo que possui massa de \(300g\)? Considere \(g = 10m/s²\).</p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>Dados:
+          \[m = 300g = 0,3kg \quad g = 10m/s²\]
+        </p>
+      </div>
+      <p>Resolução:
+        \[P = mg\]
+        \[P = 0,3 \cdot 10\]
+        \[P = 3N\]
+      </p>
+    </div>
+  </div>
+  
+  <div class="exemplo">
+    <h3>Exemplo 2</h3>
+    <p>Qual a massa de um corpo se o seu peso é de \(250N\)?</p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>Dados:
+          \[P = 250N \quad g = 10m/s²\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[P = mg\]
+        \[250 = m\cdot 10\]
+        \[\frac{250}{10} = m\]
+        \[m = \frac{250}{10} \]
+        \[m = 25kg \]
+      </p>
+    </div>
+  </div>
+
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>Qual o peso de um corpo que possui massa de \(20g\)? Considere \(g = 10m/s²\).</li>
+      <li>Qual a massa em gramas de um corpo se o seu peso é de \(7,5N\)?</li>
+    </ol>
+  </div>
+
+  <p>Na próxima aula será estudado a <a href="{%url 'nota' slug='forca-normal'%}">força normal.</a></p>
+
+
 
 </div>
 </main>

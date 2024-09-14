@@ -3,6 +3,154 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Força Resultante</h1>
+  <p>Para poder explicar movimentos mais complexos que o MRU, o qual a 
+    <a href="{%url 'nota' slug='lei-da-inercia'%}">lei da inércia</a> explica,
+    é necessário estudar sobre força resultante.
+  </p>
+
+  <h2>Força</h2>
+  <p>
+    A força é uma grandeza física vetorial, ou seja, se usa um vetor para descrevê-la,
+    que expressa qualquer interação entre partículas. Quando você empurra uma cadeira,
+    você exerce uma força. Uma maçã caindo devido a gravidade, é causado por uma força.
+    Outra maneira de se descobrir se há força em um experimento é se algum efeito pode
+    causar movimento, pois forças são causadoras de movimento. E isso se sabe devido a lei
+    da inércia. Pois se um corpo está em repouso e inicia um movimento, só pode ter sido
+    provocado por uma força.
+  </p>
+  <p>
+    \[\vec F\]
+    A unidade de força é \(N\) (newton), em homenagem a Isaac Newton. A convenção do sinal
+    algébrico é o mesmo pra vetores, se a força aponta no mesmo sentido do referencial,
+    ela recebe um valor positivo, caso contrário, valor negativo.
+  </p>
+
+  <img src="{% static "img/posts/forca1forca2.png" %}" alt="força 1 apontando para a direita e força 2 apontando para a esquerda, ambas na horizontal.">
+
+  <p>
+    No exemplo acima duas forças, \(\vec F_1\) e \(\vec F_2\), com módulos de \(30N\) e
+    \(40N\), respectivamente, seus valores algébricos serão:
+    \[F_1 = 30N \quad F_2 = -40N\]
+  </p>
+
+  <h2>Força Resultante \(\vec F_R\)</h2>
+  <p>
+    A força resultante sobre uma partícula é a soma de todas as forças aplicadas sobre a
+    partícula, ou seja:
+    \[\vec F_R = \vec F_1 + \vec F_2+ \vec F_3 + ...\]
+    soma quantas forças tiverem.
+  </p>
+  <p>
+    A equação acima pode ser escrita com uma notação mais exuta caso houver \(n\) forças
+    atuando sobre uma partícula, então a força resultante será:
+    \[\vec F_R = \sum^n_{i=1} \vec F_i  \]
+    A equação acima se lê: "o vetor força resultante é igual a soma de todos os vetores
+    forças de índice i, com i sendo igual a \(1,2,3,...,n\)"
+  </p>
+
+  <div class="container-geogebra">
+    <iframe class='geogebra' src="https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html  " allowfullscreen frameborder="0"></iframe>
+  </div>
+  
+  <h2>Exemplos</h2>
+  
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>
+      Seja o mesmo referencial da imagem anteiror, qual a força resultante dos pares 
+      \(|\vec F_1|= 30N\) e \(|\vec F_2|= 40N\), na direção do referencial, se:
+    </p>
+    <p>
+      a) Ambas apontam para a direita;
+    </p>
+    <p>
+      b) \(\vec F_1\) aponta para a direita e \(\vec F_2\) esquerda;
+    </p>
+    <p>
+      c) \(\vec F_2\) aponta para a direita e \(\vec F_1\) esquerda;
+    </p>
+    <p>
+      d) Ambas apontam para a esquerda.
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[|\vec F_1|= 30N \quad |\vec F_2|= 40N\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+      </p>
+      <p>
+        a)
+        \[\vec F_R = \vec F_1 + \vec F_2\]
+        \[F_R = F_1 + F_2\]
+        \[F_R = 30+40\]
+        \[F_R = 70N\]
+      </p>
+      <p>
+        b)
+        \[\vec F_R = \vec F_1 + \vec F_2\]
+        \[F_R = F_1 + F_2\]
+        \[F_R = 30+(-40)\]
+        \[F_R = 30-40\]
+        \[F_R = -10N\]
+      </p>
+      <p>
+        c)
+        \[\vec F_R = \vec F_1 + \vec F_2\]
+        \[F_R = F_1 + F_2\]
+        \[F_R = (-30)+40\]
+        \[F_R = -30+40\]
+        \[F_R = 10N\]
+      </p>
+      <p>
+        d)
+        \[\vec F_R = \vec F_1 + \vec F_2\]
+        \[F_R = F_1 + F_2\]
+        \[F_R = (-30)+(-40)\]
+        \[F_R = -30-40\]
+        \[F_R = -70N\]
+      </p>
+    </div>
+  </div>
+  
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>Qual a força resultante para \(|\vec F_1|= 50N\),\(|\vec F_2|= 60N\) e 
+        \(|\vec F_3|= 30N\), todas na horizontal, se: (considere o mesmo referencial
+        do exemplo)
+      </li>
+      <ol class="opcoes">
+        <li>Todas as forças para a direita;</li>
+        <li>\(\vec F_1\) para a direita e as outras para a esquerda;</li>
+        <li>\(\vec F_1\) e \(\vec F_2\) para a direita e \(\vec F_3\)
+          para a esquerda.
+        </li>
+        <li>Todas as forças para a esquerda.</li>
+      </ol>
+
+      <li>Assinale V para verdadeiro ou F para falso nas seguintes afirmativas, corrija 
+        as falsas:</li>
+      <ol class="opcoes">
+        <li>Um corpo em repouso que passa a se movimentar foi provocado por uma força resultante.</li>
+        <li>Um corpo que está em movimento para manter sua velocidade necessita de força resultante.</li>
+        <li>Um corpo que faz um movimento circular com módulo de velocidade constante não sofre
+          uma força.</li>
+        <li>Um corpo que está em movimento e passa a ficar em repouso não necessita de uma força
+          resultante.</li>
+        <li>Um corpo pode sofrer infinitas forças mas ter força resultante nula.</li>
+      </ol>
+    </ol>
+  </div>
+
+  <p>Na próxima aula será estudado a relação da força resultante com a aceleração,
+    por meio da <a href="{%url 'nota' slug='lei-da-dinamica'%}">2ª Lei de Newton.</a>
+  </p>
+
 
 </div>
 </main>
