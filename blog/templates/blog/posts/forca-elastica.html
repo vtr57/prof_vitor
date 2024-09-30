@@ -3,7 +3,94 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Força Elástica</h1>
+  <p class="introducao">
+    A força elástica é de grande importância pra física pois muitos problemas são parecidos.
+    Esta força aparece em situações simples como uma mola elástica.
+  </p>
 
+  <h2>Definição</h2>
+  <div class="container-geogebra"><iframe class='geogebra' src="https://phet.colorado.edu/sims/html/hookes-law/latest/hookes-law_pt_BR.html " allowfullscreen frameborder="0"></iframe></div>
+  <p>
+      A equação da força elástica é dada pela lei de Hooke:
+      \[\vec E = -k\vec x\]
+      Sendo \(\vec E\) a força elástica aplicada sobre a partícula que está presa a mola,
+      \(k\) a dureza da mola e \(\vec x\) o vetor deformação da mola a partir do ponto
+      de equilíbrio.
+  </p>
+  <p>
+    Pela definição acima perceba que a força elástica é um vetor sempre contrário ao vetor
+    deformação e possui a mesma direção. E seu módulo é calculado por \(E = kx\).
+  </p>
+  <p>
+    A constante elástica é a dureza da mola, ou seja, quanto mais dura for a mola, maior
+    o seu valor. E quanto mais flácida, menor o valor. A unidade da constante elástica é
+    \(N/m\).
+  </p>
+
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>
+      Qual a força elástica que uma mola aplica tendo sua constante elástica de \(300N/m\)
+      e deformada de \(5cm\).
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>Dados:
+          \[k = 300N/m \quad x=5cm=0,05m\]
+        </p>
+      </div>
+      <p>Resolução:
+        \[E=kx\]
+        \[E = 300\cdot0,05\]
+        \[E = 15N\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 2</h3>
+    <p>Uma mola presa verticalmente possui uma massa de \(200g\) em repouso presa na sua extremidade.
+      Sendo a constante da mola \(5N/cm\), qual a deformação da mola em \(cm\)? Considere \(g=10m/s²\).
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[k=5N/cm \quad m = 200g=0,2kg \]
+          \[g=10m/s²\]
+        </p>
+      </div>
+      <p>
+        Resolução:<br>
+        Pela 2ªLN tem-se, considerando um referencial vertical para cima:
+        \[F_R = ma\]
+        \[E-P = m(0)\]
+        \[kx-mg = 0\]
+        \[kx=mg\]
+        \[x=\frac{mg}{k}\]
+        \[x=\frac{0,2\cdot10}{5}\]
+        \[x=\frac{2}{5}\]
+        \[x=0,4cm\]
+      </p>
+    </div>
+  </div>
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>Qual a força elástica que uma mola aplica tendo sua constante elástica de \(600N/m\)
+        e deformada de \(8cm\).</li>
+      <li>Uma mola presa verticalmente possui uma massa de \(400g\) em repouso presa na sua extremidade.
+        Sendo a constante da mola \(2N/cm\), qual a deformação da mola em \(cm\)? Considere \(g=10m/s²\).
+      </li>
+    </ol>
+  </div>
+
+
+
+
+  
 </div>
 </main>
   {% endblock content %}

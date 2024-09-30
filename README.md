@@ -28,3 +28,4 @@ O arquivo html deve se preenchido internamente a tag `<div class="content">`.
 | vídeo YouTube | `<div class="container-video-youtube"><iframe class="video-youtube" src="" title="" frameborder="0" allow="" referrerpolicy="" allowfullscreen></iframe></div>`|
 | simulações| `<div class="container-geogebra"><iframe class='geogebra' src="" allowfullscreen frameborder="0"></iframe></div>` |
 |Imagem| `<img src="{% static "img/posts/{nome da imagem}.png" %}" alt="texto alternativo">` |
+| Sistema de equações | `\[\begin{cases}T = \mu m_1g + m_1a\\T = m_2g - m_2a\end{cases}\`|

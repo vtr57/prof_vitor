@@ -3,6 +3,101 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Força de Tensão</h1>
+  <p class="introducao">
+    A força de Tensão ocorre em fios, cabos e cordas. Geralmente se considera esses fios
+    como inextensíveis, ou seja, que não se estica.
+  </p>
+
+  <h2>Definição</h2>
+  <p>
+    A força de Tensão que atua sobre um corpo é na direação da corda esticada e
+     no sentido do puxão da corda. Como mostra a imagem abaixo:
+  </p>
+  <img src="{% static 'img/posts/Força de Tensão1.png' %}" alt="exemplo de força de tensão.">
+  <p>
+    O módulo da força de tensão é calculado a partir da 2ªLN, assim como a força normal.
+  </p>
+
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>Considere a mesma situação da imagem acima, sendo a massa do corpo de \(8kg\), 
+      qual a força de tensão? Considere \(g=10m/s²\).
+      <div class="resolucao">
+        <div class="dados">
+          <p>
+            Dados:
+            \[m=8kg \quad g=10m/s²\]
+          </p>
+        </div>
+        <p>
+          Resolução: aplicando a 2ªLN com um eixo vertical positivo para cima
+          \[F_R    = ma\]
+          \[T - F_g = m(0)\]
+          \[T - mg = 0\]
+          \[T = mg\]
+          \[T = 8\cdot10\]
+          \[T = 80N     \]
+        </p>
+      </div>
+    </p>
+  </div>
+
+  <div class="exemplo">
+    <h2>Exemplo 2</h2>
+    <p>Qual os valores da força de tensão nas cordas abaixo? Considere \(m_1 = 5kg\),
+      \(m_2 = 10kg\) e \(g=10m/s²\).
+    </p>
+    <img src="{% static 'img/posts/ForçadeTensão2.png' %}" alt="exemplo força de tensão 2.">
+    <div class="resolucao">
+      <div class="dados">
+        <p>
+          Dados:
+          \[m_1 = 5kg \quad m_2 = 10kg \quad g=10m/s²\]
+        </p>
+      </div>
+      <p>
+        Resolução: aplica-se a 2ªLN para os dois corpos.
+        <br>      
+        No corpo 2)
+        \[F_{R2} = m_2a\]
+        \[T_2 - F_{g2} = m_2(0)\]
+        \[T_2 - m_2g = 0\]
+        \[T_2 - m_2 g = 0\]
+        \[T_2 = m_2g\]
+        \[T_2 = 10\cdot 10\]
+        \[T_2 = 100N\]
+        Para o corpo 1)
+        \[F_{R1} = m_1a\]
+        \[T_1 - T_2 - F_{g1} = m_1(0)\]
+        \[T_1 - 100 - m_1g = 0\]
+        \[T_1 - 100 - 5\cdot 10 = 0\]
+        \[T_1 - 100 - 50 = 0\]
+        \[T_1 - 150 = 0\]
+        \[T_1 = 150N\]  
+      </p>
+    </div>
+  </div>
+
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>Considerando a mesma situação do exemplo 1, qual a força de tensão
+        sobre o corpo de massa \(12kg\)? Considere \(g=10m/s²\)
+      </li>
+      <li>
+        Sendo dois corpos conectado por uma corda, verticalmente, e o corpo superir conectado
+        ao teto também por uma corda. Com os corpos de massa \(2kg\) e \(3kg\), superior e inferior
+        respectivamente. Qual as forças de tensão na corda?
+      </li>
+    </ol> 
+  </div>
+
+
+
+
+
 
 </div>
 </main>

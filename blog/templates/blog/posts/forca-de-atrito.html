@@ -3,6 +3,163 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Força de Atrito</h1>
+  <p class="introducao">
+    A força de atrito é uma força de origem mecânica e eletrostática e aplicada em muitas
+    situações do dia a dia.
+  </p>
+  <div class="container-geogebra">
+    <iframe class='geogebra' src="https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html  " allowfullscreen frameborder="0"></iframe>
+  </div>
+
+  <h2>Atrito Estático</h2>
+  <p>
+    O regime estático do atrito (\(\vec A_e\)) ocorre quando o corpo que está se desejando movimentar ainda
+    não se movimentou, ou seja, quando a velocidade é nula. Esta força tem direção tangente 
+    ao plano de contato das superfícies e sentido oposto ao movimento relativo entre elas.
+    O seu módulo depende da situação, sendo calculado pela 2ª LN, como pode ser visto na
+    simulação acima.
+  </p>
+  <h2>Atrito Estático Máximo</h2>
+  <p>
+    O atrito estático máximo ocorre na iminência do movimento, tendo seu módulo dado por:
+    \[A_{max} = \mu_e N\]
+    Onde \(N\) é a força normal e \(\mu_e \) o coeficiente de atrito estático.
+  </p>
+  
+  <h2>Atrito Cinético</h2>
+  <p>
+    O regime cinético do atrito (\(\vec A_c\)) ocorre quando o corpo que se deseja movimentar está se movimentando.
+    Seu sentido é contrário ao movimento relativo entre as duas superfícies, na direção
+    tangente ao plano de contato das superfícies e seu módulo é constante e dado por:
+    \[A_c = \mu_c N\]
+    Onde \(N\) é a força normal e \(\mu_c\) o coeficiente de atrito cinético.
+  </p>
+  <p>
+    O valor do atrito estático máximo é sempre maior ao valor do atrito cinético.
+  </p>
+  <p>
+    Se numa superfície não tiver atrito, então a força para se fazer movimentar um corpo
+    paralelo a essa superfície é qualquer. Porém, a força para levantá-lo deve ser maior ou igual
+    ao peso do corpo.
+  </p>
+
+  <h2>Características</h2>
+  <p>
+      Para se diminuir a força de atrito pode-se mudar o valor do coeficiente de atrito
+      e a força normal. O coeficiente de atrito depende das superfícies em contato, já
+      a força normal pode depender do peso do objeto, por exemplo.
+  </p>
+
+  <h2>Exemplos</h2>
+  <div class="exemplo">
+    <h3>Exemplo 1</h3>
+    <p>
+      Qual a força de atrito cinético em um corpo sobre uma superfície horizontal
+      de massa de \(30kg\) com coeficiente de atrito cinético de \(0,6\)?
+    </p>
+    <div class="resolucao">
+      <div class="dados">
+        <p>Dados:
+          \[m=30kg \quad \mu_c = 0,6\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        \[A_c = \mu_c N\]
+        Neste caso a força normal será igual a força gravitacional \(mg\)
+        \[A_c = \mu_c mg\]
+        \[A_c = 0,6\cdot30\cdot10\]
+        \[A_c = 180N\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h2>Exemplo 2</h2>
+    <p>Sobre um corpo de massa de \(10kg\) em uma superfície horizontal atua uma força
+      horizontal de \(50N\) com coeficiente de atrito estático de \(0,8\). 
+      Qual a força de atrito estático?
+    </p>
+    <div class="resolucao">
+    <div class="dados">
+      <p>
+        Dados:
+        \[m=10kg\quad \mu_e = 0,8 \quad F=50N\]
+      </p>
+    </div>
+      <p>
+        Resolução: Primeiramente se calcula a força de atrito máxima:
+        \[A_{max} = \mu_eN\]
+        \[A_{max} = \mu_emg\]
+        \[A_{max} = 0,8\cdot10\dot10\]
+        \[A_{max} = 80N\]
+        E perceba que \(A_{max} > F\), então a força de atrito deve ser igual a força
+        aplicada. Então:
+        \[A = 50N\]
+      </p>
+    </div>
+  </div>
+
+  <div class="exemplo">
+    <h3>Exemplo 3</h3>
+    <p>Um corpo sobre um plano inclinado na iminência do movimento
+       com inclinação de \(30°\), qual o coeficiente de atrito sobre o corpo 
+       abaixo de massa \(20kg\)? Considere \(g=10m/s²\).
+    </p>
+    <img src="{% static 'img/posts/Força Atrito Exemplo3.png' %}" alt="exemplo 3 de força">
+    <div class="resolucao">
+      <div class="dados">
+        <p>Dados:
+          \[m = 20kg\quad \theta = 30°\quad g=10m/s²\]
+        </p>
+      </div>
+      <p>
+        Resolução:
+        Aplicando a 2ªLN na direção \(y\), tem-se:
+        \[F_{Ry} = ma_y\]
+        \[N-F_{gy} = m(0)\]
+        \[N-F_{gy} = 0\]
+        \[N-mgcos(\theta) = 0\]
+        \[N = mgcos(\theta)\]
+        \[N = 20\cdot10cos(30°)\]
+        \[N = 200\frac{\sqrt 3}{2}\]
+        \[N = 100\sqrt 3\]
+        Aplicando a 2ªLn na direção \(x\), tem-se:
+        \[F_{Rx} = ma_x\]
+        \[F_{Gx} - A_e = m(0)\]
+        \[F_{Gx} - \mu_e N = 0\]
+        \[mgsen(\theta) - \mu_e N = 0\]
+        \[20\cdot10sen(30°) - \mu_e 100\sqrt 3 = 0\]
+        \[200\frac{1}{2} - \mu_e 100\sqrt 3 = 0\]
+        \[100 - \mu_e 100\sqrt 3 = 0\]
+        \[100  = \mu_e 100\sqrt 3\]
+        \[\mu_e 100\sqrt 3 = 100 \]
+        \[\mu_e  = \frac{100}{100\sqrt 3} \]
+        \[\mu_e  = \frac{1}{\sqrt 3} \]
+        \[\mu_e  = \frac{1}{\sqrt 3}\frac{\sqrt 3}{\sqrt 3} \]
+        \[\mu_e  = \frac{\sqrt 3}{3} \]
+        Ou seja,
+        \[\mu_c = tg(\theta_{max})\]
+      </p>
+    </div>
+  </div>
+
+  <h2>Exercícios</h2>
+  <ol class="enunciado">
+    <li>Qual a força de atrito cinético em um corpo sobre uma superfície horizontal
+      de massa de \(20kg\) com coeficiente de atrito cinético de \(0,3\)? </li>
+      <li>
+        Sobre um corpo de massa de \(20kg\) em uma superfície horizontal atua uma força
+      horizontal de \(30N\) com coeficiente de atrito estático de \(0,3\). 
+      Qual a força de atrito estático?
+      </li>
+      <li>
+        Um corpo sobre um plano inclinado na iminência do movimento
+       com inclinação de \(45°\), qual o coeficiente de atrito?
+      </li>
+  </ol>
+
 
 </div>
 </main>

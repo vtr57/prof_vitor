@@ -3,7 +3,137 @@
 {% block content %}
 <main>
 <div class="content">
+  <h1>Aplicações das Leis de Newton</h1>
+  <p class="introducao">
+    Nesta aula será estudado algumas aplicações das Leis de Newton para alguns problemas
+    clássicos. O objetivo desses exercícios geralmente é encontrar a aceleração e as
+    forças internas ao sistema.
+  </p>
+  
+  <h2>Máquina de Atwood</h2>
+  <p>A máquina de Atwood é composta de duas massas presa por um fio na vertical com uma 
+    polia no meio das duas massas sem atrito com a corda e momento de inércia desprezível.
+  </p>
+  <p>Considerando \(m_2 > m_1\) e o eixo cartesiano como referencial.</p>
+  <img src="{% static 'img/posts/Aplicações Leis de Newton1.png' %}" alt="exemplo máquina de atwood">
+  <p>As forças envolvidas são:</p>
+  <img src="{% static 'img/posts/Aplicações Leis de Newton2.png' %}" alt="forças na máquina de atwood.%">
+  <p>
+    Aplicando a 2ªLN para o corpo 1 e isolando \(T\):
+    \[F_R = m_1a_1\]
+    \[T - F_{g1} = m_1a\]
+    \[T - m_1g = m_1a\]
+    \[T = m_1a + m_1g \quad (1)\]
+    Aplicando a 2ªLN para o corpo 2 e isolando \(T\):
+    \[F_R = m_2a_2\]
+    \[T - F_{g2} = m_2(-a)\]
+    \[T - m_2g = -m_2a\]
+    \[T  = m_2g -m_2a \quad (2)\]
+    Igualando as equações \(1\) e \(2\) e isolando \(a\) tem-se:
+    \[m_1a + m_1g = m_2g -m_2a\]
+    \[m_1a + m_2a = m_2g -m_1g\]
+    \[(m_1 + m_2)a = (m_2 -m_1)g\]
+    \[a = \frac{m_2 -m_1}{m_1 + m_2}g\]
+  </p>
+  <p>
+    Esta máquina foi bastante útil pois era utilizada para calcular a aceleração da gravidade.
+    Pois basta utilizar massas de valores muito próximos que \(a\) terá um valor pequeno.
+    Facilitando o uso de cronômetros.
+  </p>
+  <p>Para calcular as tensões, basta substituir \(a\) nas equações de tensão.</p>
 
+  <h2>Blocos ligados por um fio numa superfície sem atrito</h2>
+  <img src="{% static 'img/posts/Aplicações Leis de Newton3.png' %}" alt="Blocos ligados por um fio numa superfície sem atrito">
+  <p>
+    Considere \(m_2>m_1\). Nesta situação também será calculado a aceleração dos blocos e as tensões no fio.
+    Aplicando as forças:
+  </p>
+  <img src="{% static 'img/posts/Aplicações Leis de Newton4.png' %}" alt="Blocos ligados por um fio numa superfície sem atrito">
+  <p>
+    Considere um referencial com eixos vertical e horizontal, sendo para direita positivo
+    e para baixo negativo. A 2ªLN para o corpo 1 e isolando \(T\):
+    \[F_R = m_1a_1\]
+    \[T = m_1a \quad (1)\]
+    Aplicando a 2ªLN para o corpo 2 e isolando T:
+    \[F_R = m_2a_2\]
+    \[F_{g2} - T = m_2a\]
+    \[m_2g - T = m_2a\]
+    \[m_2g - m_2a = T\]
+    \[T = m_2g - m_2a \quad (2)\]
+    Igualando as equações \(1\) e \(2\) e isolando \(a\):
+    \[m_1a = m_2g - m_2a\]
+    \[m_1a +m_2a = m_2g\]
+    \[(m_1 +m_2)a = m_2g\]
+    \[a = \frac{m_2}{m_1 +m_2}g\]
+    Para calcular a tensão basta usar a primeira equação onde a tensão foi isolada.
+  </p>
+  
+  
+  <h2>Blocos ligados por um fio numa superfície com atrito</h2>
+  <img src="{% static 'img/posts/Aplicações Leis de Newton5.png' %}" alt="dois blocos ligados por um fio.%">
+  
+  <p>
+    A imagem acima é com blocos já em movimento.
+  </p>
+  <p>
+    Considere um referencial com eixos vertical e horizontal, sendo para direita positivo
+    e para baixo positivo. A 2ªLN para o corpo 1  em \(x\) e isolando \(T\):
+    \[F_{R1x} = m_1a_{1x}\]
+    \[T - A = m_1a\]
+    \[T - \mu N = m_1a \quad (1)\]
+    A 2ªLN para o corpo 1  em \(y\) e isolando \(N\):
+    \[F_{R1y} = m_1a_{1y}\]
+    \[F_{g1} - N = m_1(0)\]
+    \[m_1g - N = 0\]
+    \[N = m_1g \quad (2)\]
+    Substituindo \(2\) em \(1\) e isolando \(T\):
+    \[T - \mu N = m_1a\]
+    \[T - \mu m_1g = m_1a\]
+    \[T = \mu m_1g + m_1a \quad (3)\]
+    Aplicando a 2ªLN para o corpo 2 e isolando T:
+    \[F_{R2y} = m_2a_{2y}\]
+    \[F_{g2} - T = m_2a\]
+    \[m_2g - T = m_2a\]
+    \[m_2g - m_2a = T\]
+    \[T = m_2g - m_2a \quad (4)\]
+    Igualando as equações \(3\) e \(4\) e isolando \(a\):
+    \[
+    \begin{cases}
+    T = \mu m_1g + m_1a\\
+    T = m_2g - m_2a
+    \end{cases}
+    \]
+    \[\mu m_1g + m_1a = m_2g - m_2a\]
+    \[m_1a + m_2a= m_2g - \mu m_1g\]
+    \[(m_1 + m_2)a= (m_2 - \mu m_1)g\]
+    \[a=\frac{m_2 - \mu m_1}{m_1 + m_2}g\]
+    Para calcular a tensão basta usar a primeira equação onde a tensão foi isolada.
+  </p>
+  
+  <h2>Exercícios</h2>
+  <div class="exercicios">
+    <ol class="enunciado">
+      <li>Qual a aceleração de uma máquina de Atwood com massas de \(2kg\) e \(3kg\)?
+        Considere \(g=10m/s²\).
+      </li>
+      <li>Qual a tensão do fio na questão anterior.</li>
+      <li>Seja 2 blocos ligados por um fio inextensível que passa por uma polia de dimensões desprezíveis.
+        Um deles está suspenso no ar e o outro está sobre uma mesa horizontal sem atrito.
+        Sendo as massas deles respectivamente de \(5kg\) e \(2kg\), considerando \(g=10m/s²\),
+        qual a aceleração do sistema e a tensão no fio?
+      </li>
+      <li>
+        Considere a mesma situação anterior, porém com atrito de coeficiente de atrito cinético de \(0,4\).
+        Qual a aceleração do sistema e a tensão no fio?
+      </li>
+      <li>Qual a aceleração do sistema se \(m_1 = 2kg\) e \(m_2 = 3kg\),
+        a superfície possui atrito de coeficiente de atrito cinético de \(0,2\). Considere
+        \(g=10m/s²\).
+      </li>
+    </ol>
+  </div>
+  <img src="{%   static 'img/posts/Aplicações Leis de Newton6.png' %}" alt="dois blocos ligados por um fio.%">
+  
 </div>
 </main>
-  {% endblock content %}
+{% endblock content %}
